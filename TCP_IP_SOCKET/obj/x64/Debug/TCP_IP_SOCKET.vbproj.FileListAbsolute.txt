@@ -1,0 +1,20 @@
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.pdb
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.dll
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.pdb
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\bin\x64\Debug\TCP_IP_SOCKET.xml
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.AssemblyReference.cache
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.Resources.resources
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.GenerateResource.cache
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.vbproj.CoreCompileInputs.cache
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.dll
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.xml
+C:\Program Files\CSE\CDS\TCP_IP_SOCKET\obj\x64\Debug\TCP_IP_SOCKET.pdb

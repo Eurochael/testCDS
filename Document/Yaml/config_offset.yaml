@@ -1,0 +1,26 @@
+total_cnt: 12
+temp_offset:
+- name: Tank A
+  offset: 10
+- name: offset2
+  offset: 0
+- name: CIRCULATION THERMOSTAT_HE_3320C
+  offset: 1
+- name: offset4
+  offset: 0
+- name: offset5
+  offset: 0
+- name: offset6
+  offset: 0
+- name: offset7
+  offset: 0
+- name: offset8
+  offset: 0
+- name: offset9
+  offset: 0
+- name: offset10
+  offset: 0
+- name: offset11
+  offset: 0
+- name: offset12
+  offset: 0

@@ -1,0 +1,12 @@
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\bin\x64\Debug\LOG.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\bin\x64\Debug\LOG.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\obj\x64\Debug\LOG.csproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\obj\x64\Debug\LOG.csproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\obj\x64\Debug\LOG.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\LOG\LOG\obj\x64\Debug\LOG.pdb
+C:\Program Files\CSE\CDS\LOG\LOG\bin\x64\Debug\LOG.dll
+C:\Program Files\CSE\CDS\LOG\LOG\bin\x64\Debug\LOG.pdb
+C:\Program Files\CSE\CDS\LOG\LOG\obj\x64\Debug\LOG.csproj.AssemblyReference.cache
+C:\Program Files\CSE\CDS\LOG\LOG\obj\x64\Debug\LOG.csproj.CoreCompileInputs.cache
+C:\Program Files\CSE\CDS\LOG\LOG\obj\x64\Debug\LOG.dll
+C:\Program Files\CSE\CDS\LOG\LOG\obj\x64\Debug\LOG.pdb

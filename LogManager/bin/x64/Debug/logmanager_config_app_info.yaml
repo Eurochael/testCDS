@@ -1,0 +1,4 @@
+activate: true
+interval: 1
+use_count_file: 5
+use_count_db: 5

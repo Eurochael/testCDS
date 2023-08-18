@@ -1,0 +1,29 @@
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221101_2차 납품 후pendingList 작업\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221109_VS2019_To_VS220_Dev21.2_To_21.6\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\bin\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.vbproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.xml
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20221111\TCP_IP_SOCKET\obj\COMIZOA 원격 디버깅\TCP_IP_SOCKET.pdb

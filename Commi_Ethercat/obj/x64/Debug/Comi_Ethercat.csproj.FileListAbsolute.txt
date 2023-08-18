@@ -1,0 +1,16 @@
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\bin\x64\Debug\Comi_Ethercat.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\bin\x64\Debug\Comi_Ethercat.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.Form1.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.pdb
+C:\Program Files\CSE\CDS\Commi_Ethercat\bin\x64\Debug\Comi_Ethercat.dll
+C:\Program Files\CSE\CDS\Commi_Ethercat\bin\x64\Debug\Comi_Ethercat.pdb
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.AssemblyReference.cache
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.Form1.resources
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.GenerateResource.cache
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.csproj.CoreCompileInputs.cache
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.dll
+C:\Program Files\CSE\CDS\Commi_Ethercat\obj\x64\Debug\Comi_Ethercat.pdb

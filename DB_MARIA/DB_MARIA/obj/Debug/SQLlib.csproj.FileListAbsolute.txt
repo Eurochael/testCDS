@@ -1,0 +1,18 @@
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\bin\Debug\SQLlib.dll
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\bin\Debug\SQLlib.pdb
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\obj\Debug\SQLlib.csproj.AssemblyReference.cache
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\obj\Debug\SQLlib.csproj.CoreCompileInputs.cache
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\obj\Debug\SQLlib.dll
+D:\work\001.Project\07. AAT\source\SQLlib\SQLlib\obj\Debug\SQLlib.pdb
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\obj\Debug\SQLlib.csprojAssemblyReference.cache
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\obj\Debug\SQLlib.csproj.CoreCompileInputs.cache
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\obj\Debug\SQLlib.dll
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\obj\Debug\SQLlib.pdb
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\bin\Debug\SQLlib.dll
+C:\Users\azure\Downloads\DLLTEST_20211227_001\SQLlib\SQLlib\bin\Debug\SQLlib.pdb
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\obj\Debug\SQLlib.csprojAssemblyReference.cache
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\obj\Debug\SQLlib.csproj.CoreCompileInputs.cache
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\bin\Debug\DB_MARIA.dll
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\bin\Debug\DB_MARIA.pdb
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\obj\Debug\DB_MARIA.dll
+C:\Users\azure\Downloads\DLLTEST_20220104_001\SQLlib\SQLlib\obj\Debug\DB_MARIA.pdb

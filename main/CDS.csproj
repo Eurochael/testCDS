@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98431641-9B20-43F9-85B1-429A2BDD8E13}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cds</RootNamespace>
+    <AssemblyName>cds</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Sony Ericsson.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'COMIZOA 원격 디버깅|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>C:\Program Files\CSE\CDS\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'COMIZOA 원격 디버깅|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\COMIZOA 원격 디버깅\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Mvvm.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Core.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.LayoutControl.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Win, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="LOG">
+      <HintPath>..\LOG\LOG\bin\Debug\LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OpenHardwareMonitorLib">
+      <HintPath>..\..\CDS_20230119 반출 후 Alarm Mapping 점검_IPA Pending 추가\main\bin\Debug\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\..\CDS_20221206\main\bin\Debug\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CM_Serial\Class_Concentration_HF700.cs" />
+    <Compile Include="CM_Serial\Class_Concentration_CS150C.cs" />
+    <Compile Include="CM_Serial\Class_Concentration_CS600F.cs" />
+    <Compile Include="CM_Serial\Class_PumpController_BP21.cs" />
+    <Compile Include="CM_Serial\Class_PumpController_PB12.cs" />
+    <Compile Include="CM_Serial\Class_Concentration_CM210DC.cs" />
+    <Compile Include="CM_Serial\UC_PumpController_PB12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_PumpController_PB12.Designer.cs">
+      <DependentUpon>UC_PumpController_PB12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_FlowMeter_Sonotec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_FlowMeter_Sonotec.Designer.cs">
+      <DependentUpon>UC_FlowMeter_Sonotec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_SCR_DPU31A_025A.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_SCR_DPU31A_025A.Designer.cs">
+      <DependentUpon>UC_SCR_DPU31A_025A.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_FlowMeter_USF500.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_FlowMeter_USF500.Designer.cs">
+      <DependentUpon>UC_FlowMeter_USF500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_TempController_M74.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_TempController_M74.Designer.cs">
+      <DependentUpon>UC_TempController_M74.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_CS600F.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_CS600F.Designer.cs">
+      <DependentUpon>UC_CS600F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\UC_ThermoStat_HE_3320C.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Serial\UC_ThermoStat_HE_3320C.Designer.cs">
+      <DependentUpon>UC_ThermoStat_HE_3320C.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Socket\Class_ABB_.cs" />
+    <Compile Include="CM_Socket\Class_HeatExchanger.cs" />
+    <Compile Include="CM_Socket\UC_HeatExchanger.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Socket\UC_HeatExchanger.Designer.cs">
+      <DependentUpon>UC_HeatExchanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Socket\UC_CTC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Socket\UC_CTC.Designer.cs">
+      <DependentUpon>UC_CTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Socket\UC_ABB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CM_Socket\UC_ABB.Designer.cs">
+      <DependentUpon>UC_ABB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\cls_controll.cs" />
+    <Compile Include="Control\UC_DHF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_DHF.Designer.cs">
+      <DependentUpon>UC_DHF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_DSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_DSP.Designer.cs">
+      <DependentUpon>UC_DSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_DSP_MIX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_DSP_MIX.Designer.cs">
+      <DependentUpon>UC_DSP_MIX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_IPA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_IPA.designer.cs">
+      <DependentUpon>UC_IPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_LAL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_LAL.Designer.cs">
+      <DependentUpon>UC_LAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_APM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_APM.Designer.cs">
+      <DependentUpon>UC_APM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\uc_DIO_AIO_control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\uc_DIO_AIO_control.Designer.cs">
+      <DependentUpon>uc_DIO_AIO_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\UC_Tank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UC_Tank.Designer.cs">
+      <DependentUpon>UC_Tank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enum1.cs" />
+    <Compile Include="Form\Configuration\frm_parameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Configuration\frm_parameter.Designer.cs">
+      <DependentUpon>frm_parameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Configuration\frm_alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Configuration\frm_alarm.Designer.cs">
+      <DependentUpon>frm_alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\Class_Schematic_function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Module_Configure.cs" />
+    <Compile Include="Module\Module_OpenHardware.cs" />
+    <Compile Include="Popup\frm_popup_manual_sequence_select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_popup_manual_sequence_select.Designer.cs">
+      <DependentUpon>frm_popup_manual_sequence_select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_popup_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_popup_login.Designer.cs">
+      <DependentUpon>frm_popup_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_popup_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_popup_page.Designer.cs">
+      <DependentUpon>frm_popup_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_simulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_simulation.Designer.cs">
+      <DependentUpon>frm_simulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_process_indicator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_process_indicator.Designer.cs">
+      <DependentUpon>frm_process_indicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\frm_communications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\frm_communications.Designer.cs">
+      <DependentUpon>frm_communications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\Auto_Sequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\frm_Schematic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\frm_Schematic.designer.cs">
+      <DependentUpon>frm_Schematic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\Manual_Sequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\Schematic\Config_IO.cs" />
+    <Compile Include="Form\IO_Monitor\Schematic\tank_class.cs" />
+    <Compile Include="Form\Log\frm_totalusagelog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Log\frm_totalusagelog.Designer.cs">
+      <DependentUpon>frm_totalusagelog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Log\frm_alarmlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Log\frm_alarmlog.Designer.cs">
+      <DependentUpon>frm_alarmlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Log\frm_eventlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Log\frm_eventlog.Designer.cs">
+      <DependentUpon>frm_eventlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Log\frm_trendlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Log\frm_trendlog.Designer.cs">
+      <DependentUpon>frm_trendlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\frm_io_monitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\IO_Monitor\frm_io_monitor.Designer.cs">
+      <DependentUpon>frm_io_monitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_main.designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_messagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_messagebox.Designer.cs">
+      <DependentUpon>frm_messagebox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Configuration\frm_mixing_step.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Configuration\frm_mixing_step.Designer.cs">
+      <DependentUpon>frm_mixing_step.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frm_occured_alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_occured_alarm.Designer.cs">
+      <DependentUpon>frm_occured_alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_overview.Designer.cs">
+      <DependentUpon>frm_overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frm_skin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frm_skin.Designer.cs">
+      <DependentUpon>frm_skin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Module_Ethercat.cs" />
+    <Compile Include="CM_Socket\Module_Socket.cs" />
+    <Compile Include="Module\Module_DB.cs" />
+    <Compile Include="Module\Module_Log.cs" />
+    <Compile Include="Module\Module_main.cs" />
+    <Compile Include="Module\Module_sub.cs" />
+    <Compile Include="Module\Module_User.cs" />
+    <Compile Include="Module\Module_XML.cs" />
+    <Compile Include="Module\Module_YAML.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Popup\frm_Loading_Appstart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frm_Loading_Appstart.Designer.cs">
+      <DependentUpon>frm_Loading_Appstart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CM_Serial\Class_FlowMeter_Sonotec.cs" />
+    <Compile Include="CM_Serial\Class_SCR_DPU31A_025A.cs" />
+    <Compile Include="CM_Serial\Class_FlowMeter_USF500.cs" />
+    <Compile Include="CM_Serial\Class_Serial_Common.cs" />
+    <Compile Include="CM_Serial\Class_ThermoStat_HE_3320C.cs" />
+    <Compile Include="CM_Serial\Class_TempController_M74.cs" />
+    <Compile Include="Structure\Structure_Ethercat_Commi.cs" />
+    <EmbeddedResource Include="CM_Serial\UC_PumpController_PB12.resx">
+      <DependentUpon>UC_PumpController_PB12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_FlowMeter_Sonotec.resx">
+      <DependentUpon>UC_FlowMeter_Sonotec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_SCR_DPU31A_025A.resx">
+      <DependentUpon>UC_SCR_DPU31A_025A.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_FlowMeter_USF500.resx">
+      <DependentUpon>UC_FlowMeter_USF500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_TempController_M74.resx">
+      <DependentUpon>UC_TempController_M74.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_CS600F.resx">
+      <DependentUpon>UC_CS600F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Serial\UC_ThermoStat_HE_3320C.resx">
+      <DependentUpon>UC_ThermoStat_HE_3320C.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Socket\UC_HeatExchanger.resx">
+      <DependentUpon>UC_HeatExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Socket\UC_CTC.resx">
+      <DependentUpon>UC_CTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CM_Socket\UC_ABB.resx">
+      <DependentUpon>UC_ABB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_DHF.resx">
+      <DependentUpon>UC_DHF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_DSP.resx">
+      <DependentUpon>UC_DSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_DSP_MIX.resx">
+      <DependentUpon>UC_DSP_MIX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_IPA.resx">
+      <DependentUpon>UC_IPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_LAL.resx">
+      <DependentUpon>UC_LAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_APM.resx">
+      <DependentUpon>UC_APM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\uc_DIO_AIO_control.resx">
+      <DependentUpon>uc_DIO_AIO_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\UC_Tank.resx">
+      <DependentUpon>UC_Tank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Configuration\frm_parameter.resx">
+      <DependentUpon>frm_parameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Configuration\frm_alarm.resx">
+      <DependentUpon>frm_alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_popup_manual_sequence_select.resx">
+      <DependentUpon>frm_popup_manual_sequence_select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_popup_login.resx">
+      <DependentUpon>frm_popup_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_popup_page.resx">
+      <DependentUpon>frm_popup_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_simulation.resx">
+      <DependentUpon>frm_simulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_process_indicator.resx">
+      <DependentUpon>frm_process_indicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\IO_Monitor\frm_communications.resx">
+      <DependentUpon>frm_communications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\IO_Monitor\Schematic\frm_Schematic.resx">
+      <DependentUpon>frm_Schematic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Log\frm_totalusagelog.resx">
+      <DependentUpon>frm_totalusagelog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Log\frm_alarmlog.resx">
+      <DependentUpon>frm_alarmlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Log\frm_eventlog.resx">
+      <DependentUpon>frm_eventlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Log\frm_trendlog.resx">
+      <DependentUpon>frm_trendlog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\IO_Monitor\frm_io_monitor.resx">
+      <DependentUpon>frm_io_monitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_messagebox.resx">
+      <DependentUpon>frm_messagebox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Configuration\frm_mixing_step.resx">
+      <DependentUpon>frm_mixing_step.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_occured_alarm.resx">
+      <DependentUpon>frm_occured_alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_overview.resx">
+      <DependentUpon>frm_overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frm_skin.resx">
+      <DependentUpon>frm_skin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frm_Loading_Appstart.resx">
+      <DependentUpon>frm_Loading_Appstart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commi_Ethercat\Comi_Ethercat.csproj">
+      <Project>{0ceb36d4-a434-4576-96d1-fbd339a24486}</Project>
+      <Name>Comi_Ethercat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DB_MARIA\DB_MARIA\DB_MARIA.csproj">
+      <Project>{3a25728c-bf2e-4ae8-9b21-0017857eaaf6}</Project>
+      <Name>DB_MARIA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCP_IP_SOCKET\TCP_IP_SOCKET.vbproj">
+      <Project>{38d7d265-4646-4215-ba28-9a656f13be2e}</Project>
+      <Name>TCP_IP_SOCKET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connection_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connection_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connection_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connection_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Change_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valve_3w_v_down_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valve_3w_v_up_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heater_v_off.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heater_v_on.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pump_01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pump_02.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pump_04.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pump_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pump_on_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pump_on_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valve_3w_v_down_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valve_3w_v_up_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valve_3w_h_l_open2.png" />
+    <None Include="Resources\valve_3w_h_l_open3.png" />
+    <None Include="Resources\valve_3w_h_r_close.png" />
+    <None Include="Resources\valve_3w_h_r_open1.png" />
+    <None Include="Resources\valve_3w_h_r_open2.png" />
+    <None Include="Resources\valve_3w_h_r_open3.png" />
+    <None Include="Resources\valve_3w_v_down_open1.png" />
+    <None Include="Resources\valve_3w_v_down_open2.png" />
+    <None Include="Resources\valve_3w_v_down_open3.png" />
+    <None Include="Resources\valve_3w_v_up_open1.png" />
+    <None Include="Resources\valve_3w_v_up_open2.png" />
+    <None Include="Resources\valve_3w_v_up_open3.png" />
+    <None Include="Resources\valve_3w_h_l_close.png" />
+    <None Include="Resources\valve_3w_h_l_open1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\heater_on_r.png" />
+    <None Include="Resources\heater_off_r.png" />
+    <None Include="Resources\LED_YELLOW_NONE.png" />
+    <None Include="Resources\LED_ORANGE_NONE.png" />
+    <None Include="Resources\LED_BLUE_NONE.png" />
+    <None Include="Resources\valve_3w_h_up_open2.png" />
+    <Content Include="Version\CDS Version History.txt" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\arrow_up.png" />
+    <None Include="Resources\Concentration.png" />
+    <None Include="Resources\filter_h.png" />
+    <None Include="Resources\filter_v.png" />
+    <None Include="Resources\heater_off.png" />
+    <None Include="Resources\heater_on.png" />
+    <None Include="Resources\LED_GRAY_NONE.png" />
+    <None Include="Resources\LED_GREEN_NONE.png" />
+    <None Include="Resources\LED_RED_NONE.png" />
+    <None Include="Resources\pump_h_off.png" />
+    <None Include="Resources\pump_h_on.png" />
+    <None Include="Resources\pump_v_off.png" />
+    <None Include="Resources\pump_v_on.png" />
+    <None Include="Resources\TANK_ORI.png" />
+    <None Include="Resources\valve_3w_h_down_open.png" />
+    <None Include="Resources\valve_3w_h_up_close.png" />
+    <None Include="Resources\valve_3w_h_up_open.png" />
+    <None Include="Resources\valve_3w_v_l_close.png" />
+    <None Include="Resources\valve_3w_v_l_open.png" />
+    <None Include="Resources\valve_3w_v_r_close.png" />
+    <None Include="Resources\valve_3w_v_r_open.png" />
+    <None Include="Resources\valve_h_close.png" />
+    <None Include="Resources\valve_h_open.png" />
+    <None Include="Resources\valve_v_close.png" />
+    <None Include="Resources\valve_v_open.png" />
+    <None Include="Resources\valve_3w_h_down_close.png" />
+    <None Include="Resources\valve_3w_h_down_close2.png" />
+    <Content Include="Sony Ericsson.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

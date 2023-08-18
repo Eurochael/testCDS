@@ -1,0 +1,12 @@
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\bin\x64\Debug\DB_MARIA.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\bin\x64\Debug\DB_MARIA.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.csproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.csproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.dll
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230221_AK 반출 후 통신 관련 부분 수정(Ready 등)\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.pdb
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.csproj.AssemblyReference.cache
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.csproj.CoreCompileInputs.cache
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.dll
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\obj\x64\Debug\DB_MARIA.pdb
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\bin\x64\Debug\DB_MARIA.dll
+C:\Program Files\CSE\CDS\DB_MARIA\DB_MARIA\bin\x64\Debug\DB_MARIA.pdb

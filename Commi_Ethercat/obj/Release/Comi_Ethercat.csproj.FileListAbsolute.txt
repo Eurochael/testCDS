@@ -1,0 +1,8 @@
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.csproj.AssemblyReference.cache
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.Form1.resources
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.csproj.GenerateResource.cache
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.csproj.CoreCompileInputs.cache
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\bin\Release\Comi_Ethercat.dll
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\bin\Release\Comi_Ethercat.pdb
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.dll
+D:\Documents\04.CDS\src\beta_20230209\Commi_Ethercat\obj\Release\Comi_Ethercat.pdb

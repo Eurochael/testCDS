@@ -1,0 +1,6 @@
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\bin\Release\LOG.dll
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\bin\Release\LOG.pdb
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\obj\Release\LOG.csproj.AssemblyReference.cache
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\obj\Release\LOG.csproj.CoreCompileInputs.cache
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\obj\Release\LOG.dll
+D:\Documents\04.CDS\src\beta_20230209\LOG\LOG\obj\Release\LOG.pdb

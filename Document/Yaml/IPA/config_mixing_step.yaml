@@ -1,0 +1,20 @@
+step_cnt: 2
+ccss_cnt: 1
+mixing_use: false
+matching_file: ''
+refill_use: true
+refill_ccss: CCSS1
+ccss_info:
+- name: IPA
+  use: true
+  ccss_row: 1
+  type: CCSS1
+  chemical: IPA
+step_info:
+- name: Not Use
+  use: true
+- name: Step 1
+  use: true
+mixing_data:
+- 0
+- 1

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>게시\</PublishUrlHistory>
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>ko-KR</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>DESKTOP-O7PEDSQ:4026</RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'COMIZOA 원격 디버깅|AnyCPU'">
+    <RemoteDebugMachine>DESKTOP-O7PEDSQ:4026</RemoteDebugMachine>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+    <StartAction>Project</StartAction>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <RemoteDebugMachine>DESKTOP-O7PEDSQ:4026</RemoteDebugMachine>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'COMIZOA 원격 디버깅|x64'">
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+    <RemoteDebugMachine>DESKTOP-O7PEDSQ:4026</RemoteDebugMachine>
+  </PropertyGroup>
+</Project>

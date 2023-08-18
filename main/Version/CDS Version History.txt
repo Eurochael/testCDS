@@ -1,0 +1,1110 @@
+1.2.0.5
+
+1. 항온조 후면 온도 센서 통일
+   -. DSP, DHF, LAL, DSP_MIX Supply A, B Circulation 항온조 표기 추가
+
+2. 항온조 Heater_on Flag Reset 추가
+   -. else if (Convert.ToInt32(rcv_data_parse.reading_data[idx_parse], 16) == (int)enum_control_mode.Error)
+
+3. Gain 값 적용 변경
+   -. 기존 Gain Max값만 사용, 개선 Max, Min 확인
+   -. gain = (Program.IO.AI.Tag[idx].max - Program.IO.AI.Tag[idx].min) / (20 - 4);
+1.2.0.4
+
+1.Heat Exchanger 통신 모듈 추가
+2. Alarm 3개 추가
+            Heat_Exchanger_Connection_Fail = 2300,
+            Heat_Exchanger_Error_D1110 = 2301,
+            Heat_Exchanger_Error_D1111 = 2302,
+3. Config_socket 추가
+   heat_exchanger_ip: 127.0.0.1
+   heat_exchanger_port: 502
+
+4. Parameter 1개 추가
+            CM_Drain_Pump_Off_Time_Delay = 1806,
+
+5. 항온조 Alarm Level Heavy + 통신 포트 상태 True일 때 Off로 표기(AK 요청) / 각 UC Panel에 작업됨
+
+6. he3320c class enum 참조 버그 수정
+
+7. Supply A, B, All 구분 기능 추가
+   -. use_side: all Config 추가 -> 20230703 재 삭제 (AK에서 작업 후 머지)
+   -. enum_supply_mode 추가
+   -. Supply_A_Pump_ON_OFF 함수 구문 수정
+   -. GUI A, B 사용에 따른 인터락 추가
+
+8. Simulation Mode 추가
+   -. Serial_Parameter_Setting PortOpen 사용 안함
+
+9. DSP 농도계 기능 추가
+   -. ABB 농도계 DSP에서도 사용 가능하도록 적용
+   -. DSP DO Config 수정
+      => MAIN_RETURN_SAMPLE_1 address:37 use:true
+      => MAIN_RETURN_SAMPLE_2 address:38 use:true
+      => RETURN_SAMPLE_TO_TANK_A address:41 use:true
+      => RETURN_SAMPLE_TO_TANK_B address:42 use:true
+   -.Alarm 활성화
+      => 319, 529, 2030, 2031
+   -.Parameter 활성화 및 이름 변경
+      => 113, 114
+
+10. AK 2023-06-22 IPA 관련 수정사항 반영
+   -. Config_App_Info ipa_ccss_ready_use 추가
+   -. IPA_CCSS_Ready_Signal = 69 di 추가
+   -. IPA_CCSS_Not_Ready_Signal = 2204 알람 추가
+      => INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (2204, 'IPA CCSS Not Ready Signal', 'IPA CCSS Not Ready Signal Detected', 1, 0, 1, 1, 1, 20);
+   -. UC_IPA btn_valve_av03 하기 Interlock 추가
+      =>  else if (Program.cg_app_info.ipa_ccss_ready_use == true && Program.IO.DI.Tag[(int)Config_IO.enum_di.IPA_CCSS_Ready_Signal].value == false)
+                            {
+                                Program.main_md.Message_By_Application("Cannot Open Valve, Check IPA CCSS Ready Signal", frm_messagebox.enum_apptype.Only_OK);
+                            }
+   -. CCSS_Valve_Control_By_EQType_CCSS 함수 수정
+
+11. CTC DB Sync 기능 수정
+   -. CTC Sync 
+
+12. Thread Alarm 누락 내용 추가
+                Alarm_Cal_WDT_BY_Thread_Call(frm_alarm.enum_alarm.Life_Time_Over_Tank_A);
+                Alarm_Cal_WDT_BY_Thread_Call(frm_alarm.enum_alarm.Life_Time_Over_Tank_B);
+
+13. dt_start_process 초기화 삭제 GUI에서 (User COntroler)
+14. READY_SUPPLY_BY_CTC Supply 동시 공급 버그로
+   -. Else 문 추가에서 각 Process Time 초기화 버그 수정
+   -. A,B 각각 구문 아래와 같이 수정
+      => 전 : else if Program.tank[(int)tank_class.enum_tank_type.TANK_B].status == tank_class.enum_tank_status.SUPPLY ||Program.tank[(int)tank_class.enum_tank_type.TANK_B].status == tank_class.enum_tank_status.REFILL)
+      => 후 : else if (Program.seq.supply.cur_tank == tank_class.enum_tank_type.TANK_B &&( Program.tank[(int)tank_class.enum_tank_type.TANK_B].status == tank_class.enum_tank_status.SUPPLY ||Program.tank[(int)tank_class.enum_tank_type.TANK_B].status == tank_class.enum_tank_status.REFILL))
+
+1.2.0.3
+0. DSP, LAL, DHF 항온조 추가 기능 적용
+1. Communication Supply A, B Target 기능 삭제
+2. Log Level Manager Fuc 추가
+   -. LogWrite
+
+1.2.0.2
+0. 항온조 Tank Select, Tank A, B온도 리드 기능추가
+   -. Config_App_Info enum_he3320c_mode 추가, 이에 따른 If 문 추가 Select_Tank 함수 추가
+   -. if ((DateTime.Now - this.dt_auto_send_last[idx_serial]).TotalMilliseconds >= 500) 1000->500
+1. 항온조 통신 변경 사항 반영 (index 수정)
+
+1.2.0.1
+
+0. USF500 CH Mapping
+
+1. DI 추가
+   -. EX_TOTAL_AL
+   -. HEA_EXCHANGER_EMO
+
+2. H2SO4 AV05 버튼 수정
+
+1.2.0.0
+AK 반출 후 DSP Mix 추가
+1. DSP Mix IO 추가(Config)
+2. Main CDS Title Font Size 수정
+
+
+
+
+1.1.45.0
+1. LAL Valve Semi Auto Interlock 추가
+2. AV23, AV24 교차 Open Interlock 추가
+3. LAL Calibration 기능 수정
+   -. All_Stop 또는 Calibration End시 Calibration End 명령 전송
+4. AutoSequnce Drain Tank 제어 Interlock 해제
+   -. 각 CDS Drain Pump On시 Valve 1개만 열려도 동작 되게 수정
+5. Naura Logo Visible 통관
+6. 농도 측정 Valve 변경 사용 안함(Supply)
+
+
+
+1.1.44.0
+1. Alarm ,Parameter ',' -> ' ' 변경
+   -. alarm_comment LIKE '%,%' alarm_name LIKE '%,%'
+   -. cds_parameter_comment LIKE '%,%'
+
+2. Semi Auto Calibration 기능 추가 LAL
+   -. CS600F Alarm 추가
+      Concentration_CS_600F_Connection_Fail = 2062, Concentration_CS_600F_Alarm = 2063,
+   -. CS600F 파싱 추가 
+
+3. HE3320C Offset Func Add
+
+4. CDS_Data_Log Circulation 온도 참조 수정 항온조 supply로 되어있음
+
+5. 구조체 변경
+
+
+DB 적용 내용
+UPDATE alarm_list
+SET Alarm_Name = REPLACE(Alarm_Name, ',','')
+ ,  Alarm_Comment = REPLACE(Alarm_Comment, ',','')
+
+UPDATE parameters
+SET cds_parameter_name= REPLACE(cds_parameter_name, ',','')
+ ,  cds_parameter_comment= REPLACE(cds_parameter_comment, ',','')
+
+cds_parameter_name LIKE '%C·C%'
+-> C.C -> Chemical Change
+
+UPDATE parameters
+SET cds_parameter_unit= REPLACE(cds_parameter_unit, '℃','C')
+
+UPDATE alarm_list
+SET alarm_name = TRIM(alarm_name)
+, alarm_comment = TRIM(alarm_comment)
+
+UPDATE parameters
+SET  cds_parameter_name= TRIM(cds_parameter_name)
+,  cds_parameter_comment= TRIM(cds_parameter_comment)
+
+UPDATE parameters
+SET cds_parameter_unit_id = '18'
+
+UPDATE alarm_list
+SET alarm_unit_id = '18'
+
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (2062, 'Concentration - CS-600F Connection Fail', 'CM CS-600F - Connection Fail', 0, 0, 1, 0, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (2063, 'Concentration - CS-600F Alarm', 'CM CS-600F - Detected Alarm', 0, 0, 1, 0, 1, 1);
+
+969, 970 drain 수정
+-. MAIN CDA3 PRESS Drain Set high pressure.
+-. MAIN CDA3 PRESS Drain Set low value of pressure.
+
+
+
+1.1.43.0
+1. LAL Reclaim 배관색 변경
+2. Trend Log Size 확장
+3. Schematic Supply, Circulation Label 추가
+4. M74 Offset값 Int16으로 Convert 변경(Dword)
+5. DSP DI 12개 추가, 알람 12개 추가 + Interlock_Trip 알람 1개 추가
+
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (801, 'Leak - Prep Pump L-Leak', 'Prep Pump L-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (802, 'Leak - Prep Pump R-Leak', 'Prep Pump R-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (803, 'Prep Pump Stroke1 Error', 'Prep Pump Stroke1 Detected Alarm', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (804, 'Prep Pump Stroke2 Error', 'Prep Pump Stroke2 Detected Alarm', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1002, 'Leak - Supply A Pump L-Leak', 'Supply A Pump L-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1003, 'Leak - Supply A Pump R-Leak', 'Supply A Pump R-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1004, 'Supply A Pump Stroke1 Alarm', 'Supply A Pump Stroke1 Detected Alarm', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1005, 'Supply A Pump Stroke2 Alarm', 'Supply A Pump Stroke2 Detected Alarm', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1006, 'Leak - Supply B Pump L-Leak', 'Supply B Pump L-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1007, 'Leak - Supply B Pump R-Leak', 'Supply B Pump R-leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1008, 'Supply B Pump Stroke1 Alarm', 'Supply B Pump Stroke1 Detected Alarm', 1, 0, 1, 1, 2, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1009, 'Supply B Pump Stroke2 Alarm', 'Supply B Pump Stroke2 Detected Alarm', 1, 0, 1, 1, 2, 1);
+
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (17, 'Interlock Trip', 'Interlock Trip is detected.', 1, 0, 1, 1, 2, 1);
+
+CDS Alive Interlock disable
+
+6.M74 Offset, MV값 GUI 수정
+7. CDS Log Resource1 Modify
+8. Program.alarm_list.Alarm_Thread_Call_by_ID((int)frm_alarm.enum_alarm.CDS_Alive_Interlock, "", true, false); 숨김
+9. di 13번 Interlock_trip 추가
+- no: 13
+  address: 44
+  use: false
+  gui_display: false
+  name: Interlock_trip
+  description: INTERLOCK_TRIP
+  etc: 
+  unit: N.C
+  value: false
+  value_raw: false
+  dt_off: 2023-04-06T10:36:21.3230377+09:00
+  dt_on: 0001-01-01T00:00:00.0000000
+
+
+
+Patch Target
+18(LAL) : O
+19(DHF) : O
+20(DSP) : 
+21(APM) : O
+22(IPA#1) :
+23(IPA#2) :
+
+----------------------------------------------------------------------------------------
+
+
+
+1.1.42.0
+1. AK Sleep 확인 요청 내용
+   case tank_class.enum_seq_no.CIRCULATION_MONITORING_LEVEL:
+   if (Program.seq.main.last_act_span.TotalMilliseconds >= 1000)
+2.
+
+Patch Target
+18(LAL) : O
+19(DHF) : 
+20(DSP) : 
+21(APM) :
+22(IPA#1) :
+23(IPA#2) :
+
+
+
+
+1.1.41.0
+AK 반입
+1. Offset -> Config Save 기능 추가 config_offset.yaml
+   -. Log 추가 생성 완료
+2. Reclaim_Enabled_404 운용에서 Enable Send 삭제
+
+3. Alarm Circultaion 명칭 -> Prep 변경
+UPDATE alarm_list
+SET Alarm_Name = REPLACE(Alarm_Name, 'Circulation','Prep')
+ ,  Alarm_Comment = REPLACE(Alarm_Comment, 'Circulation','Prep')
+
+4. Para Circultaion 명칭 -> Prep 변경
+UPDATE parameters
+SET cds_parameter_name = REPLACE(cds_parameter_name, 'Circulation','Prep')
+ ,  cds_parameter_comment = REPLACE(cds_parameter_comment, 'Circulation','Prep')
+
+
+
+
+Patch Target
+18(LAL) : 
+19(DHF) : O
+20(DSP) : O
+21(APM) : O
+22(IPA#1) : O
+23(IPA#2) : O
+-------------------------------------------------------------------------------------------------------------------------
+1.1.40.0
+AK -> CSE 반출
+1. 참조 오류 수정
+   -. Tank_Use_TimeOut_Check Parameter 참조 오류 수정
+   -. Alarm_Cal_WDT 관련 함수 호출 오류 수정
+2. PN2 필터 위치 추가 (전 CDS)
+3. Tank_Volume_View APM의 경우 암모니아 -> 과수 순서로 적용
+4. Offset 기능 추가
+   -. Command 추가, APM, IPA Gui에서 확인 가능
+5. Alarm 추가
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (941, 'High - Abnormal Temp In Tank A', 'Temp Range Out(High) In Tank A Supply', 1, 0, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (942, 'Low - Abnormal Temp In Tank A', 'Temp Range Out(Low) In Tank A Supply', 1, 0, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (943, 'High - Abnormal Temp In Tank B', 'Temp Range Out(High) In Tank B Supply', 1, 0, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (944, 'Low - Abnormal Temp In Tank B', 'Temp Range Out(Low) In Tank B Supply', 1, 0, 1, 1, 1, 1);
+
+변경 761 Circulation_Sequence_Error  ->  Circulation_Pump_Error_In_Charge
+
+
+6. Para 추가
+INSERT INTO `parameters` (`cds_parameter_id`, `cds_parameter_name`, `cds_parameter_value`, `cds_parameter_unit`, `cds_parameter_comment`, `cds_parameter_minimum`, `cds_parameter_maximum`, `cds_parameter_default`, `cds_parameter_data_type`, `report_cds_parameter_to_host`, `cds_parameter_unit_id`, `cds_parameter_visible`) VALUES (1805, 'Concentration Check Need Drain Time Delay', 5, 'Sec', 'Drain Delay Before Concentration Calibration', 0, 9999, 5, 28, 0, 18, 1);
+
+삭제
+            Circulation_Pressure_High_Tank_Circulation = 717,
+            Circulation_Pressure_Low_Tank_Circulation = 718,
+             Filter_Pressure_High_Supply_A = 961,
+            Filter_Pressure_Low_Supply_A = 962,
+            Filter_Pressure_High_Supply_B = 963,
+            Filter_Pressure_Low_Supply_B = 964,
+
+변경
+파라 945 Heater On Dleay Time 로 변경
+24 Use_Time_Over_Tank_Circulation_Pump -> Pump_Operation_Error
+761 Main_Circulation_Flush_Time_Set ->  Reclaim_Flush
+
+
+
+
+
+1.1.39.0
+   -. 2023-03-27 적용
+1. Drain Valve Manual 동작 수정
+2. LAL Drain Pump 이미지 수정
+3. Manual Sequence 수행 시 Tank A, B Valve 초기화
+
+
+
+1.1.38.0
+0. Usage chart Axis 변경
+1. Lal Flushing 운용 방안 변경
+
+
+1.1.37.0
+0. LAL IO Test 준비
+1. IPA Concentration Label 수정
+2. 원액 Type일때 Concentration Label 숨김
+3. Manual Mode일 때 Supply Seq 동작하지 않음
+4. 원액 Type일때 Level H까지 Charge 구문 분기
+5. Serial 통신 Exception 로그 추가
+6. TempController mv값 View 추가
+7. trendgraph visible 기능 추가
+8. DHF,DSP,LAL M74 Temp Label visible = false(사용 안함)
+9. alarm, parameter token query like 수정
+10. 동시 공급 Sequence 추가
+11. total usage 수정 진행 중
+
+
+
+1.1.36.0
+1. Alarm 추가
+   -. 하기 알람 2개 추가, 기존 1개 No 변, Alarm enum 수정
+  INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1000, 'Leak - Supply A Pump Leak', 'Supply A pump leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+  INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (1001, 'Leak - Supply B Pump Leak', 'Supply B pump leak sensor is detected.', 1, 0, 1, 1, 2, 1);
+  기존 Leak - Circulation Pump Leak 17번 -> 800번 변경
+  -. Main Alarm call 상위 2개 항목 추가
+
+2. Trend Log 500ms -> 1000ms Save time 변경
+
+3. Empty_Check_And_TotalUsage_Reset 함수 추가
+   -. drain valve on시 Tank 적산 Reset
+
+UPDATE alarm_list
+SET Alarm_Name = REPLACE(Alarm_Name, 'Chem4','DIW')
+ ,  Alarm_Comment = REPLACE(Alarm_Comment, 'Chem4','DIW')
+WHERE Alarm_Name LIKE '%Chem4%'
+
+UPDATE parameters
+SET cds_parameter_name = REPLACE(cds_parameter_name, 'CCSS1','DSP')
+ ,  cds_parameter_comment = REPLACE(cds_parameter_comment, 'CCSS1','DSP')
+WHERE cds_parameter_name LIKE '%CCSS1%'
+
+
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (113, 'High Flowrate CCSS1', 'When user CCSS1 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (114, 'High Flowrate CCSS1', 'When user CCSS2 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (153, 'High Flowrate CCSS2', 'When user CCSS2 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (154, 'High Flowrate CCSS2', 'When user CCSS2 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (199, 'Low Flowrate CCSS3', 'When user CCSS3 valve open florate is Low', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (200, 'High Flowrate CCSS3', 'When user CCSS3 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (233, 'High Flowrate CCSS4', 'When user CCSS4 valve open florate is high', 1, 5, 1, 1, 1, 1);
+INSERT INTO `alarm_list` (`alarm_id`, `alarm_name`, `alarm_comment`, `alarm_enabled`, `alarm_wdt`, `report_alarm_to_host`, `alarm_visible`, `alarm_level`, `alarm_unit_id`) VALUES (234, 'Low Flowrate CCSS4', 'When user CCSS4 valve open florate is Low]', 1, 5, 1, 1, 1, 1);
+
+
+Patch Target
+18(LAL)
+19(DHF) : O
+20(DSP) :
+21(APM) :
+22(IPA#1) :
+23(IPA#2) :
+
+1.1.35.0
+1. DSP Pump Leak 3종 추가(IO Enum)
+   -. 현쟁 COnfig 수정 필요 48, 49 / 47 기존 DI 사용
+            CIRCULATION_PUMP_LEAK = 47,
+            SUPPLY_A_PUMP_LEAK = 48,
+            SUPPLY_B_PUMP_LEAK = 49,
+   -. DSP Pump Leak GUI 표기
+
+2. Manual Exchange 기능 수정
+
+1.1.34.0
+1. CDS Dump File Function Modify
+   -. Thread, GUI Both Create
+
+2. Alarm, Para Matching Error Description Add
+
+3. Serial CM Alarm 485 채널 분리
+
+4. CDS PC Log 기능 수정
+   -. Resourece2 10분 단위 생성
+
+5. CTC Command Retry Thread 활성화 기능 개선
+   -. if(Program.cg_socket.message_retry_cnt != 0)이 아닐때만 Retry Thread 실행
+   -. Module.Socket 동일
+
+6. STA 추가
+   -. Application.ExitThread();
+   -. Environment.Exit(0);
+
+7. IPA Semi 기능 버그 수정
+   -. Empty 조건 수정
+
+8. Alarm Occured Blink 효과 추가
+
+9. Pump Mode 추가(Circulation)
+   -. Seq_Circulation_Pump_Control 함수 수정(Enum 추가)
+   -. CIRCULATION_PUMP_START DO 추가
+   -. schematic -> Setting_Initial GUI Visible 기능 추가
+
+10. 03-14 pending 추가
+   -. IPA PN2 오타 수정 완료
+   -. CCSS 유량 단위 변경 순시 L/min 적산 L -> 공간 협소로 협의 필요
+   -. Alarm UI 종모양 Blink 효과 추가 완료
+   -. Semi-Auto 동작 버그(Empty 상황에서 완료) -> 수정 완료
+   -. Semi-Auto 동작 취소 시 문구 수정 완료(진행 중인 Semi Auto)
+   -. Alarm, Para 표기 개수 수정 완료(실제 조회되는 개수로 수정)
+   -. Tank UI내 Life Time (min) 표기 완료
+   -. parameter unit 단위 오류 -> 수정 완료
+   -. Drain Tank Label 명칭 변경 완료
+   -. Drain Auto Check Admin 권한에서만 사용 가능
+   -. IO-Monitor Admin 권한에서만 사용 가능
+   -. Schematic 명칭 변경 -> Main
+
+※ Config_app_info 추가 내용
+   -. eq_mode 하단에 추가
+   -. circulation_pump_mode enum 추가
+   -. keep_supply_and_cir_off_delay_by_change
+   
+※ Config_DO 추가 내용 DSP 기준
+   -. CIRCULATION_PUMP_START DO 85번 추가
+   -. CIRCULATION_PUMP_LEFT_ON(12), CIRCULATION_PUMP_RIGHT_ON(13) False 변경
+   -. SUPPLY A, START Address 변경
+
+※ Config_DI 추가 내용 DSP 기준
+   -. CIRCULATION_PUMP_LEFT_ON(45) False
+   -. CIRCULATION_PUMP_RIGHT_ON(46) False
+   -. CIRCULATION_PUMP_LEAK(47) False
+
+※ Parameter 추가
+   -. Keep_Supply_Time_Chemical_Changed = 971,
+   INSERT INTO `parameters` (`cds_parameter_id`, `cds_parameter_name`, `cds_parameter_value`, `cds_parameter_unit`, `cds_parameter_comment`, `cds_parameter_minimum`, `cds_parameter_maximum`, `cds_parameter_default`, `cds_parameter_data_type`, `report_cds_parameter_to_host`, `cds_parameter_unit_id`, `cds_parameter_visible`) VALUES (971, 'Keep Supply Time - Chemical Changed', 3, 'Sec', 'When the chemical liquid is replaced, the supply is maintained for a certain period of time.', 0, 10, 0, 32, 0, 18, 1);
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+1.1.33.0
+1. CSE -> AK 반출
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+1.1.32.0
+1. 03-10 수정
+2. Check_Availability_408 토큰 추가
+   -. seq 변경
+      => //Program.CTC.Message_Chemical_Change_Request_400();
+      => Program.CTC.Message_Check_Availability_408();
+      => NG 받을 때 All_Stop()
+3. Stop_Supply 신호 받을 때 All_stop()
+4. cc_lifetime_flag 누락 추가
+5. lifetime, wafercount Para 0일 때 사용 안하게 변경
+
+1.1.31.0
+1. 03-09 수정
+2. Semi-Auto Status Visble 통일화(전 약액)
+3. Auto 전환 시 Alarm Level 2일 때 팝업창 발생
+4. 유량계 단위 e/min -> L/Min 변경
+5. Serial 통신 Disconnected 점검
+6. Dump 기능 추가
+
+
+1.1.30.0
+1.Circulation Pump Parameter Add
+   -. Auto Sequence -> Seq_Circulation_Pump_Control -> circulation_pump_run_interval 추가(database 수정 필요)
+   -. 0 : Sensor Type
+   -. 1 < : Storke Type //Interlock 500ms  
+   -. Auto 일때는 0으로 강제 변경 / Manual일때는 Interval 사용 가능
+
+2. Config Download Stream Error 처리
+   -. 기존 File 존재 시 삭제 후 Overwrite
+
+3. App Start CTC DB Connection Time Delay 추가(10초 후에도 연결되지 않을 경우 동기화 중지)
+
+4. CTC_Message_Manager Ping Test 임시 추가 (CTC 통신중 아닐때)
+
+5. Socket Info (Remote Endpoint 로그 추가) 4번 동일
+
+6. EXIT 유저 로그인해야 가능
+
+Patch Target
+18 : OK
+19 : OK
+20 : OK
+21 : OK
+22 : OK
+23 : OK
+---------------------------------------------------------------------------------------------------------------------------------------
+
+1.1.29.0
+
+1.Circulation Pump Parameter Add
+   -. Auto Sequence -> Seq_Circulation_Pump_Control -> circulation_pump_run_interval 추가(database 수정 필요)
+   -. 0 : Sensor Type
+   -. 1 < : Storke Type //Interlock 500ms  
+   -. Auto 일때는 0으로 강제 변경 / Manual일때는 Interval 사용 가능
+
+Patch Target
+18 :
+19 :
+20 :
+21(APM) : OK
+22 : 
+23 : 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+1.1.28.0
+1. CSE -> AK 반입
+1. CTC <-> CDS Meesage 순서 변경
+2. Device Status Ready 조건 변경
+   -. Supply Enable시 Ready 추가
+3. 오타 수정
+   -. Concentration, Empty 등
+4. PC 온도 등 CDS 로그 생성 추가
+5. DLL 수정(Log, TCP IP Queue Type 변경)
+6. Supply, Heater Interlock Empty 조건 추가
+7. 잔건 Socket 관련 부분 Interlock 추가
+8. Alarm Parameter 영문 작업 진행
+   -. High -> Low 순
+   -. Cnt, Sec 누락 부분 수정
+9. Schematic Mixing Rate 참조 수정
+10. Program.CTC.Message_Alarm_Occurred_102 . 원복
+11. Alarm, Para comment 영문으로 변경
+12. 106 :FDC Send Retry 제외
+13. Auto -> Manual 전환 시 enable 중이면 Disable로 메시지 전달
+   -. Alarm Level2 발생 시 Disable 메시지 전달
+
+1.1.27.0
+1. CC Start End , Supply Start End 시점 수정
+2. No_Process_Request_Cancel_Event_455 오타 수정
+3. Supply Stop Interlock 추가
+   -. Supply 중일 때만 수행
+4. CTC 통신 성공 후 현재 발생 알람 동기화 기능 추가
+   -. Func_Database_And_Alarm_Sync_By_CTC_Connected
+5. Alarm Clear 후 잔여 알람 동기화 기능 추가
+   -. Alarm_Clear_Response
+6. 106이 뭔지 찾기
+7. AK -> CSE 반출
+
+1.1.26.0
+1. APM TempController -> Target Tank 구분 Command 기능 추가
+   -. Set_CH1_OUTPORT
+2. IPA HEATER_PN2_PRESS AI 추가
+   -. Alarm, Para 2개씩 추가 완료 IPA Pressure 관련
+3. 통신 Alarm_Reset_103 -> Send Token, MsgNo 버그 수정
+4. Log 추가(Main Form에서 저장) 500ms단위
+5. parameters database default : int -> float 변경
+6. Pump, Heater Login 권한에 따른 Interlock 수정(APM 추가)
+7. IPA Supply B Flow ALarm 버그 수정
+8. Parmeter parameter_unit, Visible 순서 변경
+   -. DB Columns명 수정(parameter_unit -> parameter_unit_id)
+   -. 11 : parameter_unit_id / 12 : cds_parameter_visible
+9. Alarm DB 수정
+   -. alarm_unit -> alarm_unit_id 수정
+10. CDS IPA TRIP NO->NC 수정
+11. USF500 Deep Swich APM
+   -. 1 2 3 4
+   -. ON OFF ON ON
+12. CTC <-> CDS 통신 Test 시작
+
+1.1.25.0
+CSE -> AK 반입
+1. Trend Data Save Max 1Hour 적용 FIFO
+   -. Config 추가
+   -. Trend Graph에서 조회 시 기존 Table Copy 후 출력
+2. Alarm Level 표기 버그 수정
+   -. Most Alarm Light, Warning 변경
+3. Flow, Pressure Alarm High, Low 버그 수정
+4. APM Heater Tank Target Mode GUI View 수정
+5. Alarm Visible에 따른 Row Filter에서 숨기도록 수정
+6. YAML CONFIG UPLAD 기능 삭제
+   -. DOWNLOAD만 진행
+7. IPA MAIN_RETURN_DRAIN Interlock Bug 수정
+8. Supply A, B Heater On시 Temp Range Alarm Sequence 수행
+   -.Alarm_Check_By_System 참조
+9. Trend Graph Cross Hair 추가
+10. CTC_Database_Exception 추가
+   -. CTC DB 접속 또는 YAML Config Down 실패 시 Program.cg_apploading.CTC_DB_Fail Alarm 추가
+11. parameter Column 추가 cds_parameter_default, cds_parameter_data_type
+   -. 8 bin
+   -. 9 bool
+   -. 16 ASCII
+   -. 28 4byte Int
+   -. 32 4byte float
+   -. 36 8byte float
+   -. 41 1byte unsigned
+   -. 42 2byte unsigned
+
+1.1.24.0
+AK -> CDS 반출
+1. Database_Changed_Notice 관련
+   -. Unit ID 미사용
+   -. 변경된 파라메타 값 전송이 되지 않는 버그 수정
+      => Change 진행 후 Save(변경)시 토큰 전송
+2. Chemical Change Request 수신 후 Response 전송 안함
+3. Socket Config -> trace_send_interval 항목 추가
+   -. Interval : 0 전송 안함, trace_send_interval값 주기로 데이터 전송
+4. All_Stop() 함수에서 Tank_Supply_End 먼저 호출(All Stop 후 Supply 진행 시 Supply End를 위함)
+5. Message_Send시 Event Log Filtering
+   -. tokenList != TokenList.Alarm_Occurred_102 && tokenList != TokenList.FDC_Data_Send_106 일때만 System, Event Log에 저장
+6. Message_Rcv시 Event Log Filtering
+   -. tokenList != TokenList.Device_Status_100 && tokenList != TokenList.Wafer_Count_403 일때만 System, Event Log에 저장
+7. CTC Connected, Disconnected Alarm 추가
+8. Connected 후 CTC DB에 CDS DB Delete + Insert 수행 Alarm 및 Parameter 해당 => Unit No만 진행
+9. 커미조아 DIO / AIO 각 구간별 Sleep(20) -> Sleep(1) 변경
+   Cycle Sleep(100) -> Sleep(20) 변경
+10. Level Sensor Flicker Dleay Overflow, Level HH 제외
+11. IPA -> lbl_gas_detect_alarm 표기 추가
+12. Login 권한 관련 기능 추가
+   -. 로그인 : Schematic, 버튼 기능 사용 가능
+   -. 로그인 : Mixing Step,Alarm, Parameter Save 버튼 기능 사용 가능
+   -. 로그인 : Alarm Clear 버튼 기능 사용 가능
+13. 펌프 이미지 변경 완료
+14. NAURA LOGO 적용 완료
+15. Config_app_info -> use_heating_output_mapping_tank 추가
+   -. APM Heating Circulation Line Taget -> Tank A, B Target 변경 가능
+16. App Start시 CTC Database 접속 후 Config 동기화 후 실행
+   -. Main Path XML 사용
+   -. XML Path 기준 전체 Config Load
+17. CDS Database Parameter -> parameter 관련 컬럼 오타 수정
+18. Heater On Delay Parameter 추가
+   -. supply, circulation Pump on 후 delay 시간 이후 Heater 동작
+19. Alarm Log View Level 추가
+20. Tank Temp Alarm 로직 추가
+21. Supply Time Over, Min Remark 추가
+22. Tank Ready 조건에서 Level H 제외 -> Level M로 변경
+23. Simulation 자동 로그인 추가
+
+1.1.23.0
+AK -> CDS 반출
+1. USF500 HF L->ml 단위 변경
+2. 64bit Buid 변경
+3. Serial Thread 수행 시 Load Complete 확인
+4. 통신 관련
+   -. Message System Rebbot, Restart 참조 변경
+   -. Program.CTC.Message_Device_Status_100(); 소켓 연결 후 전송 삭제 / CC Request 상태 추가
+      -> Status Bit 역순으로 변경
+   -. Message Head 1Pack 나머지 기본으로 수정 / Tchart 부분 Charset 지정, string으로 변경 Tchar Byte 수 적용
+
+5. Config_Socket 항목 추가
+   -. server_port_auto_create : ctc_network_no에 따라 Socket Port No 지정
+      -> 18 : 5000 / 19 : 5001 / 20 : 5002
+6. config_app_info 항목 제거
+   -. unit_id 제거(혼선 방지) + Cg_socket의 Network_no로 참조 변경
+7. thd_CTC_Message_Manager thread 추가
+8. 단일 인스턴스 실행 임시 해제
+9. Alarm Reset 시 Light, Heavy 없을 떄 OK, 있으면 NG
+1.1.22.0
+1. M74 Temp Controller Out of Heating 알람에서 제외(출력 의미)
+2. USF500 HF 적산계 ml 단위로 * 0.001 추가
+3. Tank Level Volume 표기
+   -. frm_schematic -> Label_Tank_Level_status 함수
+4. Alarm, Parameter Export 기능 추가
+5. 각 Chemical P&ID에 Label CCSS 번호 표기
+6. Supply Enable 조건 추가(Temp Ok 일때)
+   -. Config 사용 유무 확인 가능
+7. Supply Process Delay Temp 파라메타 추가
+8. CTC Sokcet Mode 추가
+    -. Socket Config -> ctc_ip_use_send false 시 접속되는 주소로 전달
+
+
+1.1.21.0
+2023-02-06 AK <- CSE 반입
+1. DHF Parsing 수정 ReadLine으로 변경
+
+
+
+1.1.20.0
+2023-01-19 AK -> CSE 반출
+1. Alarm Excel Mapping
+   -. Alarm Mapping Green Color 적용 완료
+   -. Pump, Heater Interlock 추가
+2. IPA Tank B Status 삭제
+3. IPA Exchange Button 삭제
+4. RS845 통신 Unit 불필요한 Send 삭제 Serial Config에서 Ch Count 사용
+   -. M74, SCR, USF 적용
+   -. 각 약액별 Config -> Serial 수정(CH Count)
+5. Alarm Occured Alarm Clear되지 않으나, Alarm 갱신되는 부분 수정
+6. 각 CCSS Input 색깔 확인
+   -. APM,IPA,DSP,DHF,LAL 확인 완료(LAL Reclaim Blue 표기)
+7. Simulatin Mode에서 Yaml 폴더 강제 지정
+   -. 각 약액의 Yaml 파일 덮어쓰지 않고, 약액 폴더의 Yaml파일을 참조하여      Simulation 실행 경로 강제 참조 해당 내용
+   -. DI,DO,AI,AO,SEIRAL,MIXING_STEP,TREND
+8. DHF Serial Rcv되지않는 부분 개선 -> Send가 없을 때 CM210 주기적 데이터 수신 로직 추가
+9. Socket Null Event Bug 수정, Generic Queue -> ConcurrentQueue 변경 동기화
+10. Occured Alarm Clear 관련 버그 수정 table 변동 시 Expand Group 되는 현상 
+   -. Devexpress Group 관련 버그 추가 수정 / DisableCurrencyManager 강제 활성화(Dev 회신 내용 적용
+11. Temp Controller Alarm 및 동작 확인 완료(Simulation)
+   -. AT, RUN ,STOP 등 에 따라 히터 색상 표기
+12. temp_pid_scheduler_use Config 추가
+13. 통신 사양서 R05 추가
+   -. Job Linked - 미사용
+   -. Stop Supply - 명령 수신 시 해당 Supply Stop 기능 추가
+   -. IPA_Usage- 명령 수신 추가
+14. LAL DO 변경 부분 추가
+15. FDC Data 적용
+16. N.C DI 반전 기능 추가(확인 후 적용 예정)
+
+
+
+1.1.19.0
+2023-01-18
+1. PCW_VALVE_ON_OFF(), Thermostat_Power_ON_OFF 함수 생성
+2. DSP 항온조 System Botting시 자동 ON, PCW Valve 자동 ON
+   -. Manual -> Auto 전환 시 전원 자동 ON
+3. Thermostat ON, OFF시 전원 제어가 아닌, Signal ON OFF 제어
+4. 항온조 테스트 완료
+   -. 항온조 통신 끊겼을 때 Interlock 추가(상태값 초기화)
+       => Seq_Monitoring -> Circulation_Heater_Interlock_And_Run_Req(A,B,CIR 동일)
+   -. Heater_Interlock_Tank_A,B,Circulation Alarm 추가
+5. All Stop시 .net Error 발생
+   -. 조치 완료(Log DLL LogWrite Qeue try Catch문 추가)
+6. DSP TS41,42,21 삭제(사용 안함)
+7. Supply_Max_Time_Over_Tank_A_Chem1, Supply_Min_Time_Over_Tank_A_Chem1 Alarm 버그 수정
+   -. 명칭 확인(Main Sequence 호출) -> CCSS_Input_TimeOut_Check_By_Tank_Charge
+   -. CCSS_Input_TimeOut_Check_By_Tank_Charge의 Min Check 조건에 Input Complete 추가
+8. CC Status 확인 필요(B Tank 안보임)
+9. Temp Controller Status 추가, Alarm 추가
+
+1.1.18.0
+2023-01-12
+1. DHF USF500 CH1:DIW, CH2:HF 변경
+2. Supply Sequence 농도 측정시 Valve Control 삭제
+3. DHF CONCENTRATION_PRESS AI 추가
+4. USF500 Alarm Mapping
+5. USF Alarm 한글 -> 영문으로 수정
+6. Semi Auto Sequence 취소 시 Valve Heater OFF And Clear
+   -. Drain Sequence 스레드 재시작
+   -. Manual_Sequence_Cancel 함수 생성
+7. MAIN_PCW_PRESS 값 변경
+8. 항온조 Alarm_chck 추가
+   -. Main Alarm 6개 추가
+   -. Alarm bit 80개 추가
+9, Circulation Flow 0 검토 필요
+
+
+
+
+
+1.1.17.0
+2023-01-06
+1. Alarm, Para 없는 ID 조회 시 알람 발생 추가(29,30)
+2. Main Sequence에서 Tank Ready 전 Tank Level H + Circulation 진행 완료 후 Temp 측정
+   -. Circulation 진행 완료 후 조건 추가
+3. CSE -> AK 반입
+1.1.16.0
+2022-12-29
+1. 반출 안함(내부에서 수정 내용, 수기로 적용)
+2. Auto 상태에서 Heater On 동작 시 3초 딜레이 적용
+   -. 3초 후 Pressure 값 확인 후 히터 온
+3. IPA Supply In Filter AI값 적용(Simulation 동일)
+4. Seqeucne Tank Temp 비교, Low < 값 < hign 적용
+   -. 기존 Set Temp > 클때 시간 비교
+5. Tank_Change_TimeOut_Check 함수 버그 수정
+   => Supply OR Refill시에만 적용
+6. Tank_Ready_TimeOut_Check 함수 버그 수정
+   -. Ready 조건이 아닌 Start된 후부터 시간 계산
+   => Drain OR Charge시에만 적용
+7. LAL Config 추가 완료
+8. Log Manager Ver 1.0.3.0 업데이트
+9. Circulation Need Tank A, B Heater Interlock 제거(Heater On 함수에서 Cehck)
+10. Heater On시 Flow Interlock 추가
+11. Simulation 농도계 추가
+12. Change_Time_Over_B__A 알람 명칭 변경
+   -. Tank_Change_TimeOut_Check() 함수 명칭 변경
+13. Paramete Save시 Contents에 적용 시점에서 Int -> Float 버그 수정
+14. Event, Alarm 시간 출력시 fff까지로 변경
+15. Event Log 추가
+   -. CTC 통신
+   -. 농도 측정
+   -. 버튼 클릭
+   -. Sequence
+16. LAL Schamatic Manual, Semi, Auto 동작 Test 완료
+   -. Reclaim Valve 협의 필요
+
+1.1.15.0*******************************************
+2022-12-23
+1. AK -> CSE 반출
+2. Semi Auto 진행 중 Manual -> Auto Mode 진행 시 2개의 Sequence가 충돌 하는 버그 개선
+   => Manual -> Auto 선택 시 사용자 팝업창 선택
+3. Supply End시 DSP Type 조건 추가(Heater OFF)
+4. Simulation 항온조 온도 자동 상승 기능 추가
+5. Manual Exchange 기능 수정
+6. Heater Interlock 변경 및 추가
+7. Parameter Value 변경점 비교 시 Float으로 변경
+8. 알람 추가
+   -. Purge Unit Alarm
+   -. MAIN_EQ_TRIP, Mix Trip Alarm, Leak Fault
+
+
+1.1.14.0*******************************************
+2022-12-21
+1. CSE -> AK 반입
+2. Auto -> Manual 진행 후 다시 Auto Mode 시 Tank , Pump, Heater Reset 기능 추가
+3. Sonotec totalusage_reset Code 03 -> 05 변경
+4. DHF Simulation Test 완료
+5. CTC Alive Signal 변경
+6. Chem1~4 Supply Over Time 참조 수정
+7. AK -> CSE 반출
+
+1.1.13.0*******************************************
+2022-12-15
+1. AK -> CSE 반출
+2. MixingStep Config 추가(원액 Refill시 사용 CCSS Type 추가)
+   -. refill_ccss 추가 CCSS1이 기본 REFILL -> 설정한 Type으로 Refill 추가
+   -. Mixing Step에서 설정가능(Refill use, Refill CCSS)
+3. Circulation Seq Error 추가
+4. Alarm Reset By Enum 추가
+5. Buzzer Stop 기능 추가
+6. Alarm Poup Form Collapsed 기능 추가
+   -. if (_actived == false) { GridView_Colappsed();} 기능 추가
+7. 통신 사양서 R01 적용
+
+
+1.1.12.0*******************************************
+2022-12-14
+1. 
+DIW 적산 Interval 변경
+2. Main Status ABB, CTC 위치 변경 DSP일때는 ABB 농도계 Invisible
+3. Semi Auto 진행 시 각 Tank Value Clear 함수 추가
+4. Drain Sequence Bug 개선 필요 (미완료)
+   -. Seq_Drain_Valve_Monitoring 수정 및 Log 추가
+5.임시 변경********************
+   //2022-12-15 DSP 원액 Test를 위해 강제로 CCSS1 -> CCSS4 임시 변경
+     CCSS_INPUT_START_FORCE(tank_class.enum_tank_type.TANK_A, enum_ccss.CCSS4);
+     CCSS_INPUT_END_FORCE(tank_class.enum_tank_type.TANK_A, enum_ccss.CCSS4);
+
+6. SemiAuto 진행시 Status Label 추가
+7. DSP 원액 Test 완료
+
+9. DSP 농도 Label 삭제
+1.1.12.0*******************************************
+2022-12-09
+1. CSE -> AK 반입
+2. Heater On Off 함수 출력으로 변경
+3. IO Serial 내용 변경
+4. DSP Drain Tank Level Label 위치 변경
+5. DSP Flow Meter 통신 추가됨 적용 필요
+6. Drain AI값 추가됨 - 적용 완료
+7. DSP Supply 사용 시 CCSS1 출력 Signal 추가
+8. Prameter value int -> Float 변경
+   -. database 수정
+   -. Parameter Return Value 함수 int, float 2가지로 분리
+   -. Parameter Form에서 Textbox Float Type으로 변경
+9. DSP 농도 Label 삭제
+
+1.1.11.0*******************************************
+2022-12-08
+1. DSP Simulation Test 진행, Simulation Manual, SemiAuto, Auto Test 진행 완료
+2. CCSS_INPUT_END_BY_TOTALUSAGE 개선
+   -. 기존 : H Level Touch 후 H Level이 풀려야만 추가 Interlock 동작
+   -. 변경 : H Level이 풀리지 않아도 Level H시 Interlock 지속적으로 동작
+3. Alarm 추가 진행 중(Excel 기반) + Remark 등
+
+
+1.1.10.0*******************************************
+2022-12-06
+1. AK -> CSE 반출 
+2. Alarm Disable 후 사용자가 삭제시 Alarm Clear
+3. Sampling Port 사용 후 Delay 전 Close 시 팝업창 발생 안함
+4. IPA 적산량 Sonotec으로 수정 / 적산 적용 시점 Valve Close로 재 변경
+5. IPA Semi-Auto, Auto Mode Test 완료
+6. Alarm, Parmeter 버그 수정
+7. Config IO No 추가 및 APM, IPA, DSP Config File 변경
+8. Config Creater Project 추가
+   -. DIO AIO 생성 Tool
+9. Schematic Chemical 6종 Usercontrol 추가 완료
+
+1.1.9.0*******************************************
+2022-12-05
+1. CSE -> AK 반입
+2. Drain Tank HH Alarm 추가
+3. Tank Disalbe시 Interlock 추가 각 Valve 사용 불가능
+4. Low - Exhaust Alarm(Sensor) 추가
+5. Level High High - Drain Tank
+6. Tank Status 표시 추가(작은 Label)
+
+1.1.8.0*******************************************
+2022-12-04
+1. Sequence Main Auto Mode에서만 동작으로 변경
+2. APM -> DB set password for 'root'@'%' = PASSWORD('1234'); 변경 필요
+3. ALarm 추가
+   -. Chem1_Abnormal_Flow_Min ~ Chem4_Abnormal_Flow_Min
+4. Auto Manual Mode UI 색상 구분
+5. Drain 완료 후 농도 초기화 추가
+6. 통신 사양서 R01, 적용
+7. CSE -> AK 반입
+
+1.1.7.0*******************************************
+2022-12-02*******************************************
+1. Occurred Alarm Get_Most_Alarm_Level_Count 수정
+2. HEATER, PUMP Interlock 추가 각 Valve Open시에만 사용 가능
+   -. Manual Bustton, Auto 추가
+   -. 진행 안될때 이유 로그 생성
+3. 각 Sequence Alarm Level Heavy일 때 seqeunce Holding
+4. Supply 중 LL 일때 각 해당 Supply Stop
+5. Manual중 각Pump Status가 False일때 DO Signal Flase로 변경(인터락)
+6. Alarm, Parameter 누락분 추가   
+7. 농도계 Send Interval 100 -> 50
+8. AK -> CSE 반출
+
+1.1.7.0*******************************************
+2022-12-01*******************************************
+1. Semi Auto, Auto Test 완료
+2. CCSS Start Sequence 수정
+3. Parameter, Alarm Changed View, Min, Max Interlock 설정(timer 이용)
+   -. Cell Change Color로 구분
+   -. Cell Change후 벗어 날 시 팝업창 발생
+4. 적산 Trend 수정 완료(Chemical 별)
+5. Trend Log Enum 추가 및 Mapping 완료(APM 기준)
+6. 원액일때 Refill 기능 추가
+7. 각 Chemical별 CCSS1, CCSS2, CCSS3, CCSS4 변수 생성 필요 -> 미완료
+
+1.1.7.0*******************************************
+2022-11-30*******************************************
+1. Semi-Auto 진행 시 Tank Value 초기화
+2. Manual상태에서 Empty일때 Circulation, Supply Pump 중지 Interlock 추가
+3. Auto Sequence 2차 테스트
+   -. 각 Sequence로그 추가
+
+1.1.7.0*******************************************
+2022-11-29*******************************************
+1. TotalUsage_Reset H2O2 참조 오류 수정
+2. Auto sequence 테스트 완료
+   -. refil 추가 필요
+   -. mixing step 동일 투입 확인
+   -. Tank Change시 Tank b가 Low 일때 Drain 대기 확인(Cir Drain 아니면 일반 Drain 진행)
+3. 적산 View 확인 필요
+
+1.1.7.0*******************************************
+2022-11-28*******************************************
+1. Flow Min, Max 0~40L 변경 Waste Drain만 20설정
+2. Semi Auto Sequence 버그 수정(유량 Reset, CCSS1,2,3,4 Complete 등)
+3. Total Usage Bug 수정 필요 -> 미완료
+4. 노말 오토 테스트 완료
+   -. Mixing 순서 변경 확인 필요
+   -. Life Time, Wafer Count 변경 확인 필요
+   -. 리필 기능 추가 필요
+2022-11-24*******************************************
+1. AK <- CSE 반입
+2. Circulation Status Error 발생 시 Ready로 초기화 필요(Alarm Reset 등) -> 미완료
+3. Empty_Level_Sensor_Change_Time_Delay parameter 추가
+   -. empty Level Sensor는 와류로 따로간다.
+4. Semi-Auto 시작 전 Message Popup -> 미완료
+   -. Semi-Auto 취소 시 Tank 상태 변경 및 Valve 초기화 완료
+5. MAIN PN2 -> 소숫점 1자리 추가 완료
+6. Pressure 소숫점 3자리 출력 완료
+7. HDIW_Temp_Check test를 위해 강제 OK
+
+
+
+History*******************************************
+1.1.6.0*******************************************
+2022-11-23*******************************************
+History*******************************************
+1. AK -> CSE 반출
+2. DateTime calendar view 추가(Time 선택 가능)
+3. Serial 10초이상 Rcv없을 때 Error 발생 처리 -> 미완료
+   -. LED 추가, Main에서 사용중인 Serial에서 1개 이상 통신 문제일 경우 주황색 LED로 변경
+   -. EEthercat 가상 Daemon이 실행중이 아닐 때 주황색 LED로 변경
+4. Alarm List AK 수신 내용 + Serail 통신 부분 추가로 대체
+5. Drain Sequence 변경(Drain 또는 Drain wait일떄만 동작하며, Sequence에서 Drain Status로 변경 시 동작)
+   -. Sequence에서는 Drain Valve Off만 담당
+   -. Parmeter(M, H)일 떄 Checmial Drain 진행
+   -. Parmeter(M, H) 미만일 때 Tank Drain 진행
+   -. Simulation 확인 완료
+   -. 위 문제로 Circulation_Need Function 변경 -> Heater On Tank Status Charge 이상일때만 동작
+6. Tank Low Level시 Pump Heater 중단 Sequence Interlock 추가
+
+7. CCSS 순번 변경
+   -. DIW = CCSS4 고정
+   -. P&ID 각 Chemical 순서로 CCSS 번호 할당
+8. CCSS_USE_SIGNAL_OUT Sequence 추가
+9. Alarm Parameter Insert App 분리
+
+1.1.5.0*******************************************
+2022-11-21*******************************************
+History*******************************************
+1. Serial RCV Parsing 수정 read_q -> rcv_byte
+2. AI Gain값 단위 수정 * 0.001
+   -. Program.IO.AI.Tag[idx].value = ((Program.IO.AI.Tag[idx].value_raw * 0.001) * Program.IO.AI.Tag[idx].gain) + Program.IO.AI.Tag[idx].offset;
+   -. Mpa 0.000 단위
+3. USF500 Mapping, 참조 이름 및 방법 변경
+   -. APM Schematic 배선과 실제 다름 / 실제 연결로 Mapping
+   -. USF1 CH1 등 명칭 Chemical로 수정
+   -. 유량, 적산량 확인 완료
+4. Drain Tank Sequnece 수정
+   -. Check Auto가 아니어도, Level Sensor에 따라 펌프 강제 중지(Drain 시킬께 없을 때)
+5. lbl_press_ps33.text Mapiing /  농도계 Pressure 삭제 (없음)
+6. CCSS1_INPUT_END_BY_TOTALUSAGE 1, 2, 3에서 적산양에 상관없이, H level 일때는 Input Valve Close 추가
+   -. Manual_Valve_Close_By_TotalUsage_Over H2O2 참조 오류 수정
+7. Supply Tank A, B 중복 Open 금지 Interlock 추가
+8. IO Monitor View 소숫점 2자리 고정
+9. AK - 요청 -> 미완료
+   -. USF500 Alarm 추가
+   -. 8 : ERROR_MEASURE_CH1, 9 : ERROR_MEASURE_CH2, + (ERROR_INIT_0_CH1 OR ERROR_INIT_0_CH2 OR ERROR_SET)
+10. APM P&ID 수정 Supply A, B 표기 오류 수정
+11. Program 종료 시 Pump , heater 모두 OFF 추가
+12. Manual Supply A, B 또는 Circulation 진행 시 사용하는 Tank의 Level이 낮아질 경우 Pump 중지
+13. Serial 10초이상 Rcv없을 때 Error 발생 처리
+   -. 
+1.1.4.0*******************************************
+2022-11-18*******************************************
+History*******************************************
+1. ELEC DOOR OVERRIDE NC -> NC변경
+2. Level Sensor 중간 오류 검출 Alarm 추가
+   -. LevelSensor_Alarm_Check_Tank_A
+   -. LevelSensor_Alarm_Check_Tank_B
+3. btn_valve_av25 Interlock에서 Circulation Pump true 제외
+4. SUPPLY_A_PUMP_ON_OFF simulation mode만 적용되있음 -> 실제 동작으로 수정
+5. 유량계 값 파싱 -> 미완료
+6. Alarm Not Use일때 Alarm Insert 하지 않음 -> 완료
+7. Alarm 추가 요청
+   -. HDIW POWER ON 꺼지면 OFF Alarm 발생 -> 미완료
+   -. HDIW REMOTE START 후 DI REMOTE MODE OFF시 Alarm 발생 -> 미완료
+8. Drain 운영 Sequence 수정 사항 -> 완료
+   -.LS-61, LS-62 Label 이름 Swap
+9. AV43, AV44 Interlock 변경(Mapping 오류) -> 완료
+10. Manual 제어 -> Drain Tank 관련 Valve  ON시 Bottom Vat OR On Level 확인
+11. 시뮬레이션 모드일때 Type (Simul) 추가 -> 완료
+12. Drain Pump 운영 시퀀스 수정 및 파라메타 추가 -> 완료
+13. Manual 상태에서 공급 배관 Close 검토(현재 적산만 되어있음) -> 미완료
+
+1.1.3.0*******************************************
+2022-11-17*******************************************
+History*******************************************
+1. IPA Config IO, Schematic 작업
+2. APM - N.O, N.C(Interlock) Mapping 확인
+3. Simulation Start시 N.C DI True로 시작
+
+1.1.2.0*******************************************
+2022-11-15*******************************************
+History*******************************************
+1. Level HH, OverFlow On True -> False 변경
+2. M74 Message_Command_To_Byte_M74_TO_Send -> 국번 Remove 부분 수정
+   -. M74 국번, SV, PV Mapping
+3. DO 출력 Address Mapping 변경
+4. IO Test를 위한 기능 임시 중지
+   -. //20221116 IO Test를 위해 임시 중지 
+   -. Circulation start, Drain Pump On/Off, HDIW By Pass 
+      => Seq_Monitoring
+   -. APM UC - Overflow Line 수정
+5. Simulation Tank B 명칭 'A' -> 'B' 수정
+6. AK -> CSE 반출
+
+1.1.1.0*******************************************
+2022-11-14*******************************************
+History*******************************************
+1. Schematic Form -> UserControl Type으로 변경
+   -. LAL 추가 완료
+   -. IPA 추가 완료
+2. 공통 작업 -> 함수화
+3. DO SUPPLY PUMP A START, SUPPLY PUMP B START 추가
+   -. APM Pump제어 Function에 추가 완료
+4. APM Alarm 전체 추가 완료(DIO / AIO 기준)
+
+
+1.1.0.0*******************************************
+2022-11-11*******************************************
+History*******************************************
+1. VS2022, Dev 21.6, 모든 프로젝트 .net fraework 4.8로 변경
+2. Loading App Start Popup 기능 변경
+   -. Retry시 Errror 발생 시점에서 재시작
+   -. 각 case별 로그 생성 추가
+   -. App Memory, C, D 드라이브 메모리 사용량 추가
+   -. CTC Rcv, Send log 추가 , Communication 기능 추가
+   -. M74R Class 제거, M74로 통합
+   -. Alarm Level 표기 수정
+1.0.22.0*******************************************
+2022-11-08*******************************************
+History*******************************************
+1. Log Manager Config 사용 유/무에 따라 호출
+2. Wafer Count, Life TIme Supply외에도 표기
+3. Mixing Order 호출, Auto, 
+시작에만 호출 + Parameter Save시에 호출로 변경
+4. IO Monitor Digital, Analog Type combbox로 수정함
+5. HDIW 운용방안 추가 AK 요청 사항
+6. Sampling Port 사용 Sequence 추가
+7. Auto / Semi Auto 상태에서 Valve, Pump, Heater 제어 불가 인터락 추가
+8. Circulation 진행 시 Pressure 확인 인터락 추가, Parameter, Alarm 추가
+9. Manul Mode에서 Interlcok 추가
+
+
+--------------------------------------------------------------------------------
+Mariadb password 변경
+1. 명령 프롬프트 실행
+2. mysqladmin -uroot -pexpress2345 password 1234 실행

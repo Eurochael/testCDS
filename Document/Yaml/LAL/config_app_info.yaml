@@ -1,0 +1,39 @@
+version: 1.0.22.0
+mode_simulation:
+  use: true
+  use_ethercat_real: false
+internal_info:
+  log_manager_run: true
+  usage_app: 0
+  usage_drive_c: 0
+  usage_drive_d: 0
+tank_info: 
+- name: A
+  enable: true
+- name: B
+  enable: true
+- name: C
+  enable: false
+eq_type: apm
+eq_mode: none
+circulation_pump_mode: none
+keep_supply_and_cir_off_delay_by_change: false
+ignore_ctc_config_sync: true
+ignore_hdiw_by_pass: true
+supply_enable_force: false
+supply_empty_level_to_stop: false
+use_heating_output_mapping_tank: false
+use_concentration_check: true
+temp_pid_scheduler_use: false
+semi_auto_state: false
+totalusage_slice_interval: 200
+user_info:
+ login_expire_time: 60
+ user_password: 1
+ admin_password: 1
+log_save_level_min: 0
+serial_connect_time: 10
+abb_connect_time: 10
+ctc_connect_time: 10
+log_serial_view_type: 0
+

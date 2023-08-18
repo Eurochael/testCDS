@@ -1,0 +1,6 @@
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.csproj.AssemblyReference.cache
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.csproj.SuggestedBindingRedirects.cache
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.Form1.resources
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.Properties.Resources.resources
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.csproj.GenerateResource.cache
+D:\Documents\04.CDS\src\beta_20230209\Config_Create\obj\Debug\Config_Create.csproj.CoreCompileInputs.cache

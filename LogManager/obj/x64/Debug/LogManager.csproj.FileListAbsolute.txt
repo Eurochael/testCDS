@@ -1,0 +1,90 @@
+C:\Program Files\CSE\CDS\LogManager\bin\x64\Debug\LogManager.exe.config
+C:\Program Files\CSE\CDS\LogManager\bin\x64\Debug\LogManager.exe
+C:\Program Files\CSE\CDS\LogManager\bin\x64\Debug\LogManager.pdb
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.exe
+C:\Program Files\CSE\CDS\LogManager\obj\x64\Debug\LogManager.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\bin\x64\Debug\LogManager.exe.config
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\bin\x64\Debug\LogManager.exe
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\bin\x64\Debug\LogManager.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.exe
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230310\LogManager\obj\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS\LogManager\bin\x64\Debug\LogManager.exe.config
+D:\CDS\Current\CDS\LogManager\bin\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS\LogManager\bin\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS\LogManager\obj\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+D:\CDS\Current\CDS_20230404\LogManager\bin\x64\Debug\LogManager.exe.config
+D:\CDS\Current\CDS_20230404\LogManager\bin\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS_20230404\LogManager\bin\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS_20230404\LogManager\obj\x64\Debug\LogManager.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\bin\x64\Debug\LogManager.exe.config
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\bin\x64\Debug\LogManager.exe
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\bin\x64\Debug\LogManager.pdb
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.exe
+D:\WorkStation\001.DEVELOP PLATFORM\001. Visual Studio Winform\003. Aprotech EQ\Source\CDS\CDS_20230404\LogManager\obj\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS_20230411\LogManager\bin\x64\Debug\LogManager.exe.config
+D:\CDS\Current\CDS_20230411\LogManager\bin\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS_20230411\LogManager\bin\x64\Debug\LogManager.pdb
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.csproj.AssemblyReference.cache
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.uc_targetbox_db.resources
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.uc_targetbox_work.resources
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.frm_main.resources
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.Properties.Resources.resources
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.uc_targetbox_log.resources
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.csproj.GenerateResource.cache
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.csproj.CoreCompileInputs.cache
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.csproj.CopyComplete
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.exe
+D:\CDS\Current\CDS_20230411\LogManager\obj\x64\Debug\LogManager.pdb

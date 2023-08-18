@@ -1,0 +1,59 @@
+step_cnt: 5
+ccss_cnt: 4
+mixing_use: true
+matching_file: ''
+refill_use: false
+refill_ccss: CCSS4
+ccss_info:
+- name: H2O2
+  use: true
+  ccss_row: 1
+  type: CCSS1
+  chemical: H2O2
+- name: H2SO4
+  use: true
+  ccss_row: 2
+  type: CCSS2
+  chemical: H2SO4
+- name: DHF
+  use: true
+  ccss_row: 3
+  type: CCSS3
+  chemical: HF
+- name: DIW
+  use: true
+  ccss_row: 4
+  type: CCSS4
+  chemical: DIW
+step_info:
+- name: Not Use
+  use: true
+- name: Step 1
+  use: true
+- name: Step 2
+  use: true
+- name: Step 3
+  use: true
+- name: Step 4
+  use: true
+mixing_data:
+- 0
+- 0
+- 0
+- 0
+- 1
+- 0
+- 0
+- 0
+- 0
+- 1
+- 0
+- 0
+- 0
+- 0
+- 1
+- 0
+- 0
+- 0
+- 0
+- 1

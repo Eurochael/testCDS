@@ -1,0 +1,1442 @@
+use_cnt: 80
+Tag:
+- no: 0
+  address: 0
+  use: true
+  gui_display: true
+  type: 
+  name: EXHAUST
+  description: EXHAUST
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 1
+  address: 1
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_A_FILTER_IN_PRESS
+  description: SUPPLY_A_FILTER_IN_PRESS
+  etc: 
+  value_raw: 20000
+  value: 2
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 2
+  address: 2
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_A_FILTER_OUT_PRESS
+  description: SUPPLY_A_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 4075
+  value: 0.0093799999999999994
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 3
+  address: 3
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_B_FILTER_IN_PRESS
+  description: SUPPLY_B_FILTER_IN_PRESS
+  etc: 
+  value_raw: 4131
+  value: 0.016380000000000002
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 4
+  address: 4
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_B_FILTER_OUT_PRESS
+  description: SUPPLY_B_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 4027
+  value: 0.0033799999999999998
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 5
+  address: 5
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_A_FLOW
+  description: SUPPLY_A_FLOW
+  etc: 
+  value_raw: 4006
+  value: 0.014999999999999999
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 6
+  address: 6
+  use: true
+  gui_display: true
+  type: 
+  name: SUPPLY_B_FLOW
+  description: SUPPLY_B_FLOW
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 7
+  address: 7
+  use: true
+  gui_display: true
+  type: 
+  name: CIRCULATION_FLOW
+  description: CIRCULATION_FLOW
+  etc: 
+  value_raw: 4004
+  value: 0.01
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 8
+  address: 15
+  use: true
+  gui_display: true
+  type: 
+  name: CHEMICAL_RETURN_A
+  description: CHEMICAL_RETURN_A
+  etc: 
+  value_raw: 4083
+  value: 0.010370000000000001
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 9
+  address: 16
+  use: true
+  gui_display: true
+  type: 
+  name: CHEMICAL_RETURN_B
+  description: CHEMICAL_RETURN_B
+  etc: 
+  value_raw: 4053
+  value: 0.0066300000000000005
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 10
+  address: 10
+  use: false
+  gui_display: false
+  type: 
+  name: SUPPLY_FILTER_IN_PRESS
+  description: SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 11
+  address: 23
+  use: true
+  gui_display: true
+  type: 
+  name: DRAIN_FLOW
+  description: DRAIN_FLOW
+  etc: 
+  value_raw: 4003
+  value: 0.0074999999999999997
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 12
+  address: 12
+  use: false
+  gui_display: false
+  type: 
+  name: DSP_SUPPLY_FLOW
+  description: DSP_SUPPLY_FLOW
+  etc: 
+  value_raw: 9730
+  value: 14.324999999999999
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 13
+  address: 13
+  use: false
+  gui_display: false
+  type: 
+  name: DIW_SUPPLY_FLOW
+  description: DIW_SUPPLY_FLOW
+  etc: 
+  value_raw: 9532
+  value: 13.83
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 14
+  address: 14
+  use: false
+  gui_display: false
+  type: 
+  name: SUPPLY_A_THERMOSTAT_PCW_FLOW
+  description: SUPPLY_A_THERMOSTAT_PCW_FLOW
+  etc: 
+  value_raw: 9400
+  value: 13.557499999999999
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 15
+  address: 15
+  use: false
+  gui_display: false
+  type: 
+  name: SUPPLY_B_THERMOSTAT_PCW_FLOW
+  description: SUPPLY_B_THERMOSTAT_PCW_FLOW
+  etc: 
+  value_raw: 4120
+  value: 0.29999999999999999
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 16
+  address: 16
+  use: false
+  gui_display: false
+  type: 
+  name: CIRCULATION_THERMOSTAT_PCW_FLOW
+  description: CIRCULATION_THERMOSTAT_PCW_FLOW
+  etc: 
+  value_raw: 4124
+  value: 0.31
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 17
+  address: 17
+  use: true
+  gui_display: true
+  type: 
+  name: TANKA_PN2_FLOW
+  description: TANKA_PN2_FLOW
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 18
+  address: 18
+  use: true
+  gui_display: true
+  type: 
+  name: TANKB_PN2_FLOW
+  description: TANKB_PN2_FLOW
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 19
+  address: 19
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_19
+  description: SPARE_19
+  etc: 
+  value_raw: 4049
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 20
+  address: 20
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_20
+  description: SPARE_20
+  etc: 
+  value_raw: 12415
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 21
+  address: 13
+  use: true
+  gui_display: true
+  type: 
+  name: H2O2_SUPPLY_FILTER_IN_PRESS
+  description: H2O2_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 9579
+  value: 0.69738
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 22
+  address: 14
+  use: true
+  gui_display: true
+  type: 
+  name: H2O2_SUPPLY_FILTER_OUT_PRESS
+  description: H2O2_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 9423
+  value: 0.67788000000000004
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 23
+  address: 23
+  use: false
+  gui_display: false
+  type: 
+  name: HF_SUPPLY_FILTER_IN_PRESS
+  description: HF_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 4010
+  value: 0.0012500000000000002
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 24
+  address: 24
+  use: false
+  gui_display: false
+  type: 
+  name: HF_SUPPLY_FILTER_OUT_PRESS
+  description: HF_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 25
+  address: 25
+  use: false
+  gui_display: false
+  type: 
+  name: DSP_SUPPLY_FILTER_IN_PRESS
+  description: DSP_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 26
+  address: 26
+  use: false
+  gui_display: false
+  type: 
+  name: DSP_SUPPLY_FILTER_OUT_PRESS
+  description: DSP_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 27
+  address: 27
+  use: false
+  gui_display: false
+  type: 
+  name: LAL_SUPPLY_FILTER_IN_PRESS
+  description: LAL_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 28
+  address: 28
+  use: false
+  gui_display: false
+  type: 
+  name: LAL_SUPPLY_FILTER_OUT_PRESS
+  description: LAL_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 29
+  address: 8
+  use: true
+  gui_display: true
+  type: 
+  name: NH4OH_SUPPLY_FILTER_IN_PRESS
+  description: NH4OH_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 9756
+  value: 0.71950000000000003
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 30
+  address: 9
+  use: true
+  gui_display: true
+  type: 
+  name: NH4OH_SUPPLY_FILTER_OUT_PRESS
+  description: NH4OH_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 9659
+  value: 0.70738000000000012
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 31
+  address: 31
+  use: false
+  gui_display: false
+  type: 
+  name: RECLAIM_FILTER_IN_PRESS
+  description: RECLAIM_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 32
+  address: 32
+  use: false
+  gui_display: false
+  type: 
+  name: RECLAIM_FILTER_OUT_PRESS
+  description: RECLAIM_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 33
+  address: 33
+  use: false
+  gui_display: false
+  type: 
+  name: IPA_SUPPLY_FILTER_IN_PRESS
+  description: IPA_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 34
+  address: 34
+  use: false
+  gui_display: false
+  type: 
+  name: IPA_SUPPLY_FILTER_OUT_PRESS
+  description: IPA_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 35
+  address: 35
+  use: false
+  gui_display: false
+  type: 
+  name: H2SO4_SUPPLY_FILTER_IN_PRESS
+  description: H2SO4_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 36
+  address: 36
+  use: false
+  gui_display: false
+  type: 
+  name: H2SO4_SUPPLY_FILTER_OUT_PRESS
+  description: H2SO4_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 37
+  address: 37
+  use: false
+  gui_display: false
+  type: 
+  name: DHF_SUPPLY_FILTER_IN_PRESS
+  description: DHF_SUPPLY_FILTER_IN_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 38
+  address: 38
+  use: false
+  gui_display: false
+  type: 
+  name: DHF_SUPPLY_FILTER_OUT_PRESS
+  description: DHF_SUPPLY_FILTER_OUT_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 39
+  address: 39
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_39
+  description: SPARE_39
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 40
+  address: 19
+  use: true
+  gui_display: true
+  type: 
+  name: MAIN_PN2_PRESS
+  description: MAIN_PN2_PRESS
+  etc: 
+  value_raw: 4049
+  value: 0.00613
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 41
+  address: 41
+  use: false
+  gui_display: false
+  type: 
+  name: MAIN_PCW_PRESS
+  description: MAIN_PCW_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 42
+  address: 20
+  use: true
+  gui_display: true
+  type: 
+  name: MAIN_CDA1_PRESS_PUMP
+  description: MAIN_CDA1_PRESS_PUMP
+  etc: 
+  value_raw: 12415
+  value: 0.52594000000000007
+  min: 0
+  max: 10
+  range_row: 0
+  range_high: 0
+  gain: 0.625
+  offset: -2.5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 43
+  address: 21
+  use: true
+  gui_display: true
+  type: 
+  name: MAIN_CDA2_PRESS_SOL
+  description: MAIN_CDA2_PRESS_SOL
+  etc: 
+  value_raw: 12461
+  value: 0.52881
+  min: 0
+  max: 10
+  range_row: 0
+  range_high: 0
+  gain: 0.625
+  offset: -2.5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 44
+  address: 22
+  use: true
+  gui_display: true
+  type: 
+  name: MAIN_CDA3_PRESS_DRAIN
+  description: MAIN_CDA3_PRESS_DRAIN
+  etc: 
+  value_raw: 12450
+  value: 0.52812999999999999
+  min: 0
+  max: 10
+  range_row: 0
+  range_high: 0
+  gain: 0.625
+  offset: -2.5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 45
+  address: 11
+  use: true
+  gui_display: true
+  type: 
+  name: CIRCULATION_PRESS
+  description: CIRCULATION_PRESS
+  etc: 
+  value_raw: 4444
+  value: 0.055500000000000008
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 46
+  address: 46
+  use: false
+  gui_display: false
+  type: 
+  name: DIW_SUPPLY_PRESS
+  description: DIW_SUPPLY_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 47
+  address: 12
+  use: true
+  gui_display: true
+  type: 
+  name: HOT_DIW_SUPPLY_PRESS
+  description: HOT_DIW_SUPPLY_PRESS
+  etc: 
+  value_raw: 9773
+  value: 0.72162000000000004
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 48
+  address: 10
+  use: true
+  gui_display: true
+  type: 
+  name: HDIW_FLOW_MONITORING
+  description: HDIW_FLOW_MONITORING
+  etc: 
+  value_raw: 4000
+  value: 0
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 49
+  address: 49
+  use: false
+  gui_display: false
+  type: 
+  name: HDIW_TEMP_MONITORING
+  description: HDIW_TEMP_MONITORING
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 50
+  address: 50
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_50
+  description: SPARE_50
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 51
+  address: 51
+  use: false
+  gui_display: false
+  type: 
+  name: CONCENTRATION_PRESS
+  description: CONCENTRATION_PRESS
+  etc: 
+  value_raw: 0
+  value: -0.5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 52
+  address: 52
+  use: false
+  gui_display: false
+  type: 
+  name: TANK_PN2_FLOW
+  description: TANK_PN2_FLOW
+  etc: 
+  value_raw: 0
+  value: -10
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 53
+  address: 53
+  use: false
+  gui_display: false
+  type: 
+  name: HEATER_PN2_FLOW
+  description: HEATER_PN2_FLOW
+  etc: 
+  value_raw: 0
+  value: -10
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 54
+  address: 54
+  use: false
+  gui_display: false
+  type: 
+  name: CM_DIW_PRESS
+  description: CM_DIW_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 55
+  address: 55
+  use: false
+  gui_display: false
+  type: 
+  name: CM_SAMPLING_PRESS
+  description: CM_SAMPLING_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 56
+  address: 56
+  use: false
+  gui_display: false
+  type: 
+  name: CM_PUMP_PRESS
+  description: CM_PUMP_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 57
+  address: 57
+  use: false
+  gui_display: false
+  type: 
+  name: CM_SOL_PRESS
+  description: CM_SOL_PRESS
+  etc: 
+  value_raw: 0
+  value: -5
+  min: 0
+  max: 20
+  range_row: 0
+  range_high: 0
+  gain: 1.25
+  offset: -5
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 58
+  address: 58
+  use: false
+  gui_display: false
+  type: 
+  name: CM_SAMPLING_FLOW
+  description: CM_SAMPLING_FLOW
+  etc: 
+  value_raw: 0
+  value: -10
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 59
+  address: 59
+  use: false
+  gui_display: false
+  type: 
+  name: CM_DIW_FLOW
+  description: CM_DIW_FLOW
+  etc: 
+  value_raw: 0
+  value: -10
+  min: 0
+  max: 40
+  range_row: 0
+  range_high: 0
+  gain: 2.5
+  offset: -10
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 60
+  address: 60
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_60
+  description: SPARE_60
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 61
+  address: 61
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_61
+  description: SPARE_61
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 62
+  address: 62
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_62
+  description: SPARE_62
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 63
+  address: 63
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_63
+  description: SPARE_63
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 64
+  address: 64
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_64
+  description: SPARE_64
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 65
+  address: 65
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_65
+  description: SPARE_65
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 66
+  address: 66
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_66
+  description: SPARE_66
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 67
+  address: 67
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_67
+  description: SPARE_67
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 68
+  address: 68
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_68
+  description: SPARE_68
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 69
+  address: 69
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_69
+  description: SPARE_69
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 70
+  address: 70
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_70
+  description: SPARE_70
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 71
+  address: 71
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_71
+  description: SPARE_71
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 72
+  address: 72
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_72
+  description: SPARE_72
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 73
+  address: 73
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_73
+  description: SPARE_73
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 74
+  address: 74
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_74
+  description: SPARE_74
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 75
+  address: 75
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_75
+  description: SPARE_75
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 76
+  address: 76
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_76
+  description: SPARE_76
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 77
+  address: 77
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_77
+  description: SPARE_77
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 78
+  address: 78
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_78
+  description: SPARE_78
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma
+- no: 79
+  address: 79
+  use: false
+  gui_display: false
+  type: 
+  name: SPARE_79
+  description: SPARE_79
+  etc: 
+  value_raw: 0
+  value: 0
+  min: 0
+  max: 0
+  range_row: 0
+  range_high: 0
+  gain: 0
+  offset: 0
+  unit: 4~20mA
+  range: _4_to_20_ma

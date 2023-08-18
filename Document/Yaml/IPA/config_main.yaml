@@ -1,0 +1,31 @@
+path:
+  xml: C:\Program Files\AK\Config\XML\
+  yaml: C:\Program Files\AK\Config\Yaml\
+  log: D:\CDS\Log\
+  log_io: D:\CDS\Log\IO\
+  log_trend: D:\CDS\Log_TrendData\
+  mixing_step_save_folder_name: MixingStep
+db_server:
+  ip: 127.0.0.1
+  port: 3306
+  driver: MariaDB ODBC 3.1 Driver
+  database: ascent
+  id: root
+  password: 1234
+  connection: DRIVER={MariaDB ODBC 3.1 Driver};SERVER=127.0.0.1;PORT=3306;USER=root;PASSWORD=express2345;DATABASE=ctc;
+db_local_cds:
+  ip: 127.0.0.1
+  port: 3306
+  driver: MariaDB ODBC 3.1 Driver
+  database: cds
+  id: root
+  password: 1234
+  connection: DRIVER={MariaDB ODBC 3.1 Driver};SERVER=127.0.0.1;PORT=3306;USER=root;PASSWORD=express2345;DATABASE=cds;
+db_Local_fdc:
+  ip: 127.0.0.1
+  port: 3306
+  driver: MariaDB ODBC 3.1 Driver
+  database: fdc
+  id: root
+  password: 1234
+  connection: DRIVER={MariaDB ODBC 3.1 Driver};SERVER=127.0.0.1;PORT=3306;USER=root;PASSWORD=express2345;DATABASE=fdc;

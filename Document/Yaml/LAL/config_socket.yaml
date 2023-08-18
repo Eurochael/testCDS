@@ -1,0 +1,14 @@
+server_port: 5000
+server_name: CDS-SERVER
+server_port_auto_create: false
+use_response_check: false
+message_retry_cnt: 0
+message_retry_interval: 3000
+rcv_timeout: 5
+ctc_network_no: 18
+abb_ip: 127.0.0.1
+abb_port: 502
+ctc_ip_use_send: false
+ctc_ip: 127.0.0.1
+ctc_port: 5000
+trace_send_interval : 0

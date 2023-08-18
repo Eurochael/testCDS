@@ -1,0 +1,9 @@
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.csproj.AssemblyReference.cache
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.csproj.SuggestedBindingRedirects.cache
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.uc_targetbox_db.resources
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.uc_targetbox_work.resources
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.frm_main.resources
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.Properties.Resources.resources
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.uc_targetbox_log.resources
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.csproj.GenerateResource.cache
+D:\Documents\04.CDS\src\beta_20230209\LogManager\obj\Debug\LogManager.csproj.CoreCompileInputs.cache

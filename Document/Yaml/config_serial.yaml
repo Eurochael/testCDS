@@ -1,0 +1,142 @@
+use_cnt: 10
+Tag:
+- address: 0
+  use: true
+  gui_display: false
+  comport: 10
+  name: SUPPLY A THERMOSTAT_HE_3320C
+  description: SUPPLY A THERMOSTAT_HE_3320C
+  etc: 
+  ch_total_cnt: 0
+  unit: THERMOSTAT_HE_3320C
+  buadrate: _9600
+  parity: none
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 1
+  use: true
+  gui_display: false
+  comport: 11
+  name: SUPPLY B THERMOSTAT_HE_3320C
+  description: SUPPLY B THERMOSTAT_HE_3320C
+  etc: 
+  ch_total_cnt: 0
+  unit: THERMOSTAT_HE_3320C
+  buadrate: _9600
+  parity: none
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 2
+  use: true
+  gui_display: false
+  comport: 12
+  name: CIRCULATION THERMOSTAT_HE_3320C
+  description: CIRCULATION THERMOSTAT_HE_3320C
+  etc: 
+  ch_total_cnt: 0
+  unit: THERMOSTAT_HE_3320C
+  buadrate: _9600
+  parity: none
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 3
+  use: false
+  gui_display: false
+  comport: 13
+  name: SONOTEC FLOWMETER
+  description: SONOTEC FLOWMETER
+  etc: 
+  ch_total_cnt: 0
+  unit: FLOWMETER_SONOTEC
+  buadrate: _115200
+  parity: none
+  databit: bit8
+  stopbit: bit1
+  type: rs485
+- address: 4
+  use: true
+  gui_display: true
+  comport: 14
+  name: 
+  description: SUPPLY A PUMP CONTROLLER
+  etc: 
+  ch_total_cnt: 0
+  unit: PUMP_CONTROLLER_PB12
+  buadrate: _19200
+  parity: odd
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 5
+  use: true
+  gui_display: false
+  comport: 15
+  name: 
+  description: SUPPLY B PUMP CONTROLLER
+  etc: 
+  ch_total_cnt: 0
+  unit: PUMP_CONTROLLER_PB12
+  buadrate: _19200
+  parity: odd
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 6
+  use: true
+  gui_display: true
+  comport: 16
+  name: CONCENTRATION_CS600F
+  description: CONCENTRATION_CS600F
+  etc: 
+  ch_total_cnt: 0
+  unit: CONCENTRATION_CS600Fd
+  buadrate: _9600
+  parity: none
+  databit: bit8
+  stopbit: bit1
+  type: rs232_422
+- address: 7
+  use: true
+  gui_display: true
+  comport: 17
+  name: 
+  description: TEMP CONTROLLER
+  etc: 
+  ch_total_cnt: 1
+  unit: TEMP_CONTROLLER_M74
+  buadrate: _19200
+  parity: even
+  databit: bit8
+  stopbit: bit1
+  type: rs485
+- address: 8
+  use: false
+  gui_display: false
+  comport: 18
+  name: 
+  description: TEMP CONTROLLER
+  etc: 
+  ch_total_cnt: 0
+  unit: TEMP_CONTROLLER_M74
+  buadrate: _19200
+  parity: even
+  databit: bit8
+  stopbit: bit1
+  type: rs485
+- address: 9
+  use: false
+  gui_display: false
+  comport: 19
+  name: 
+  description: TEMP CONTROLLER
+  etc: 
+  ch_total_cnt: 0
+  unit: TEMP_CONTROLLER_M74
+  buadrate: _19200
+  parity: even
+  databit: bit8
+  stopbit: bit1
+  type: rs485

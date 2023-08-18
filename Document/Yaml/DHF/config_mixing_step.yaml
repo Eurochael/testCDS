@@ -1,0 +1,31 @@
+step_cnt: 3
+ccss_cnt: 2
+mixing_use: true
+matching_file: ''
+refill_use: false
+refill_ccss: CCSS1
+ccss_info:
+- name: HF
+  use: true
+  ccss_row: 1
+  type: CCSS1
+  chemical: HF
+- name: DIW
+  use: true
+  ccss_row: 1
+  type: CCSS4
+  chemical: DIW
+step_info:
+- name: Not Use
+  use: true
+- name: Step 1
+  use: true
+- name: Step 2
+  use: true
+mixing_data:
+- 1
+- 0
+- 0
+- 1
+- 0
+- 0
